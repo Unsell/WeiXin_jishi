@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上报时间</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/ShangBan_Time.css">
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+	</head>
+	<body>
+		<div class="mui-content">
+			<span class="HuoSuo_title">美丽水疗会所</span>
+			<div class="box_img">
+				<img src="../images/0.jpg" alt="" width="65px" height="65px" />
+				<span class="mui-icon iconfont icon-dian loca_top"></span>
+				<span class="mui-icon iconfont icon-dian loca_bottom"></span>
+			</div>
+			<div class="JiShi_infor">0021陈晓娟</div>
+			<div class="box_infor">
+				<div class="infor_title">请选择您的上班时间</div>
+				<div class="box_input">
+					<div>开始</div>
+					<input type="time" class="type_time" value="" />
+				</div>
+				<div class="box_input">
+					<div>结束</div>
+					<input type="time" class="type_time" value="" />
+				</div>
+			</div>
+			<div class="box_btn">
+				<button class="mui-btn mui-btn-positive">确定</button>
+				<button class="mui-btn mui-btn-outlined">返回</button>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="box_nav">
+			<div class="box_icon ">
+				<a href="#Icon_SheZhi" class="span_icon right_border">
+					<span class="mui-icon iconfont icon-shezhi"></span>
+				</a>
+				<a class="span_icon">
+					<span class="mui-icon iconfont icon-icon"></span>
+				</a>
+			</div>
+		</div>
+		<!--弹窗---icon操作-->
+		<div id="Icon_SheZhi" class="mui-popover mui-popover-action">
+			<div class="box_Icon_SheZhi">
+				<div class="span_icon">
+					<span class="mui-icon mui-icon-closeempty"></span>
+				</div>
+				<div class="box_CaoZuo">
+					<span>个人资料</span>
+					<div class="box_Line"></div>
+				</div>
+				<div class="box_CaoZuo">
+					<span>退出账号</span>
+					<div class="box_Line"></div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.box_Icon_SheZhi>.span_icon').click(function(){
+					mui('#Icon_SheZhi').popover('hide');
+				})
+			})
+		</script>
+	</body>
+</html>

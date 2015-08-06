@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>技师操作页面</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/JiShi_CaoZuo.css">
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	</head>
+	<body>
+		<div class="mui-content">
+			<span class="HuoSuo_title">美丽水疗会所</span>
+			<div class="box_img">
+				<img src="../images/0.jpg" alt="" width="65px" height="65px" />
+				<span class="mui-icon iconfont icon-dian loca_top"></span>
+				<span class="mui-icon iconfont icon-dian loca_bottom"></span>
+			</div>
+			<div class="JiShi_infor">0021陈晓娟</div>
+			<div class="box_infor">
+				<ul>
+					<li><span>上班时间：09:00-20:00</span></li>
+					<li><span>当前状态：领客正在为您接单</span></li>
+				</ul>
+			</div>
+			<div class="box_operation">
+				<a href="#ShangZhong" class="operation_infor operation_right" disabled="">
+					<div class="operation_icon">
+						<span class="mui-icon iconfont icon-iconfont74"></span>
+					</div>
+					<div class="box_Line"></div>
+					<div class="operation_type">上钟</div>
+				</a>
+				<a href="#BaoZhong" class="operation_infor operation_right">
+					<div class="operation_icon">
+						<span class="mui-icon iconfont icon-biaoqian16"></span>
+					</div>
+					<div class="box_Line"></div>
+					<div class="operation_type">报钟</div>
+				</a>
+				<a class="operation_infor">
+					<div class="operation_icon">
+						<span class="mui-icon iconfont icon-augiczhiwentubiao"></span>
+					</div>
+					<div class="box_Line"></div>
+					<div class="operation_type">下班</div>
+				</a>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="box_nav">
+			<div class="box_icon ">
+				<a href="#Icon_SheZhi" class="span_icon right_border">
+					<span class="mui-icon iconfont icon-shezhi"></span>
+				</a>
+				<a class="span_icon">
+					<span class="mui-icon iconfont icon-icon"></span>
+				</a>
+			</div>
+		</div>
+		<!--弹窗---上钟-->
+		<div id="ShangZhong" class="mui-popover mui-popover-action ">
+			<div class="box_ShangZhong">
+				<div class="box_title">
+					<div>上钟</div>
+					<div class="box_Line"></div>
+				</div>
+				<div class="infor_customer mui-select" >
+					<span>项目</span>
+					<select name="" id="">
+						<option value="">请选择项目</option>
+						<option value="">日式</option>
+						<option value="">中式</option>
+					</select>
+				</div>
+				<div class="infor_customer">
+					<span>时长</span>
+					<span class="span_paddleft">sadas</span>
+					<!--<input type="text"  value="" disabled="" />-->
+				</div>
+				<div class="infor_customer">
+					<span>锁牌</span>
+					<input type="text"  value="" />
+				</div>
+				<div class="infor_customer">
+					<span>房间</span>
+					<input type="text"  value="" />
+				</div>
+				<div class="box_state ">
+					<p>完成此服务后您将:</p>
+					<div class="mui-select">
+						<select name="" id="">
+							<option value="">继续接单</option>
+							<option value="">直接下班(服务期间将不为您接单)</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="box_button">
+				<button class="btn_confirm">提交</button>
+				<button class="btn_cancle">取消</button>
+			</div>
+		</div>
+		<!--弹窗---下钟 -->
+		<div id="XiaZhong" class="mui-popover mui-popover-action">
+			<div class="box_XiaZhong">
+				<div class="box_title">
+					<div>下钟</div>
+					<div class="box_Line"></div>
+				</div>
+				<div class="infor_customer">
+					<span>技师</span>
+					<span class="span_paddleft">sadas</span>
+					<!--<input type="text"  value="" disabled="" />-->
+				</div>
+				<div class="infor_customer">
+					<span>锁牌</span>
+					<span class="span_paddleft">sadas</span>
+					<!--<input type="text"  value="" disabled="" />-->
+				</div>
+				<div class="infor_customer">
+					<span>房间</span>
+					<span class="span_paddleft">sadas</span>
+					<!--<input type="text"  value="" disabled="" />-->
+				</div>
+				<div class="infor_customer">
+					<span>项目</span>
+					<span class="span_paddleft">sadas</span>
+					<!--<input type="text"  value="" disabled="" />-->
+				</div>
+				<div class="infor_customer">
+					<span>小费</span>
+					<input type="text"  value="" />
+				</div>
+			</div>
+			<div class="box_button">
+				<button class="btn_confirm">提交</button>
+				<button class="btn_cancle">取消</button>
+			</div>
+		</div>
+		<!--弹窗---报钟-->
+		<div id="BaoZhong" class="mui-popover mui-popover-action">
+			<div class="box_BaoZhong">
+				<div class="box_title">
+					<div>上报预约</div>
+					<div class="box_Line"></div>
+				</div>
+				<div class="infor_customer">
+					<span>技师工号</span>
+					<input type="text"  value="" />
+				</div>
+				<div class="infor_customer">
+					<span>客户锁牌</span>
+					<input type="text"  value="" />
+				</div>
+				<div class="infor_customer margin_left">
+					<span class="span_type">项目</span>
+					<input type="text"  value="" />
+				</div>
+				<div class="infor_customer margin_left">
+					<span class="span_type">电话</span>
+					<input type="text"  value="" />
+				</div>
+			</div>
+			<div class="box_button">
+				<button class="btn_confirm">下钟</button>
+				<button class="btn_cancle">取消</button>
+			</div>
+		</div>
+		<!--弹窗---icon操作-->
+		<div id="Icon_SheZhi" class="mui-popover mui-popover-action">
+			<div class="box_Icon_SheZhi">
+				<div class="span_icon">
+					<span class="mui-icon mui-icon-closeempty"></span>
+				</div>
+				<div class="box_CaoZuo">
+					<span>个人资料</span>
+					<div class="box_Line"></div>
+				</div>
+				<div class="box_CaoZuo">
+					<span>退出账号</span>
+					<div class="box_Line"></div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				$('.operation_icon').css("height",$('.operation_icon').width())
+				$('.box_Icon_SheZhi>.span_icon').click(function(){
+					mui('#Icon_SheZhi').popover('hide');
+				})
+			})
+		</script>
+	</body>
+</html>

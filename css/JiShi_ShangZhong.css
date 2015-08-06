@@ -1,0 +1,218 @@
+
+.mui-content{
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 15%;
+	text-align: center;
+}
+.End_time{
+	font-size: 2.8em;
+	color: #665241;
+	margin: 13% auto;
+}
+.box_infor{
+	padding: 25px 0 ;
+}
+.box_infor .JiShi_state{
+	margin: 0 0 0 2%;
+	
+}
+.box_infor .JiShi_state>li{
+	width: 88%;
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 12px;
+	color: #665241;
+	border-bottom: 1px solid #E6D3C3;
+}
+.box_infor .JiShi_state>li>span{
+	padding-right: 10px;
+}
+.box_infor .Project_infor{
+	margin: 8% 0 0 2%;
+	
+}
+.box_infor .Project_infor>li{
+	width: 88%;
+	margin-bottom: 8px;
+	text-align: left;
+	font-size: 12px;
+	color: #665241;
+	border-bottom: 1px solid #E6D3C3;
+}
+.box_infor .Project_infor>li>span{
+	padding-right: 10px;
+	
+}
+.box_infor .Project_infor .type_letter{
+	letter-spacing: 25px;
+}
+.box_infor .Project_infor .type_marginleft{
+	margin-left: -35px;
+}
+.box_State{
+	margin: 15px 0 40px;
+}
+.Type_State{
+	width: 29%;
+	/*height: 110px;*/
+	display: inline-block;
+}
+.Type_State .btn_State{
+	width: 100%;
+	background: #01CA98;
+	color: white;
+}
+.box_State .State_right{
+	margin-right: 4%;
+}
+.Type_State .box_Line{
+	height: 1px;
+	width: 50px;
+	margin-top: 6px;
+}
+
+/*弹窗---下钟*/
+#XiaZhong{
+	position: fixed;
+	top: 10% !important;
+	color: #665241;
+	width: 82%;
+	height: 300px;
+	background: white;
+	margin: 0 9%;
+}
+.box_XiaZhong{
+	width: 100%;
+	padding: 5% 8% 0;
+}
+body{
+	position: relative;
+}
+
+.infor_customer{
+	height: 32px;
+	width: 100%;
+	margin-bottom: 4%;
+}
+.infor_customer span{
+	font-size: 0.8em;
+	padding: 0 3px 0 8px;
+}
+.infor_customer .span_paddleft{
+	padding-left: 20px;
+	display: inline-block;
+	width: 79%;
+	height: 25px;
+	border-bottom: 1px solid #cccccc;
+}
+.infor_customer input{
+	display: inline-block;
+	width: 79%;
+	height: 32px;
+	background: #F0E4DD;
+	border: none;
+	font-size: 0.8em;
+	padding-left: 20px;
+}
+input:focus{
+	border: 1px solid #41D7B0;
+	/*border-radius: 0;*/
+}
+
+.box_button button{
+	width: 50%;
+	border: none;
+	height: 45px;
+	color: #665241;
+	border-radius: 0;
+}
+.box_button .btn_confirm{
+	background: #E3D6CF;
+}
+.box_button .btn_cancle{
+	margin-left: -5px;
+	background: #ECE3DB;
+}
+
+#XiaZhong .box_Line{
+	width: 50px;
+	margin-bottom: 5%;
+}
+#XiaZhong .box_button{
+	margin-top: 10%;
+}
+
+/*弹窗---报钟*/
+#BaoZhong{
+	position: fixed;
+	top: 10% !important;
+	color: #665241;
+	width: 82%;
+	height: 280px;
+	background: white;
+	margin: 0 9%;
+}
+.box_BaoZhong{
+	width: 100%;
+	padding: 5% 5% 0;
+}
+#BaoZhong .box_title{
+	margin-left: 15px;
+}
+#BaoZhong .box_Line{
+	width: 50px;
+	margin-bottom: 5%;
+}
+
+#BaoZhong .infor_customer input{
+	display: inline-block;
+	width: 65%;
+	height: 32px;
+	background: #F0E4DD;
+	border: none;
+	font-size: 0.8em;
+	padding-left: 10px;
+}
+#BaoZhong .span_type{
+	letter-spacing: 30px;
+}
+#BaoZhong .margin_left input{
+	margin-left: -33px;
+	font-size: 0.7em;
+}
+#BaoZhong .box_button{
+	margin-top: 15%;
+}
+
+/*弹窗---icon操作*/
+#Icon_SheZhi{
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	background: #212120;
+}
+.box_Icon_SheZhi{
+	text-align: center;
+	padding-top: 20%;
+	font-size: 0.9em;
+}
+.box_Icon_SheZhi .span_icon{
+	margin-bottom: 15%;
+}
+.box_Icon_SheZhi .span_icon span{
+	font-size: 43px;
+}
+.box_Icon_SheZhi .box_CaoZuo{
+	margin-bottom: 10%;
+}
+.box_Icon_SheZhi .box_CaoZuo .box_Line{
+	width: 50px;
+	margin:  3px auto 0;
+}
+
+

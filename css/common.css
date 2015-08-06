@@ -1,0 +1,198 @@
+
+body,.mui-content{
+	background: #FAF1E9;
+}
+
+/*logo*/
+.logo{
+	width: 100%;
+	height: 65px;
+	text-align: center;
+	
+}
+.box_logo{
+	position: relative;
+	height: 50px;
+	/*margin: 0 auto;*/
+	font-size: 0.7em;
+	color: #4F4B4C;
+}
+.box_logo img{
+	position: absolute;
+	top: 4px;
+	left: 0;
+}
+.logo_infor{
+	text-align: left;
+	margin-left: 58px;
+	padding-top: 15px;
+	line-height: 16px;
+	font-size: 1.33em;
+}
+.linkke{
+	line-height: 25px;
+	font-size: 1.15em;
+}
+
+/*输入框*/
+.infor_input{
+	display: block;
+	margin-top: 15px;
+	width: 100%;
+	height: 40px;
+	background: white;
+	position: relative;
+	border-radius: 5px;
+	
+}
+.infor_input .mui-icon{
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 17px;
+	line-height: 40px;
+	color: #665241;
+	margin-left: 5px;
+}
+.infor_input span{
+	
+}
+.infor_input input{
+	border-color: white;
+	display: inline-block;
+	line-height: 20px;
+	padding-left: 40px;
+	border-radius: 5px;
+	border: 1px solid #E6D3C3;
+}
+input::-webkit-input-placeholder {
+	color: #998573 !important; 
+	opacity: 0.8;
+	font-size: 13px;
+}
+input:focus{
+	border: 1px solid #41D7B0;
+	/*border-radius: 0;*/
+}
+
+/*盒子---按钮*/
+.box_btn{
+	margin-top: 30px;
+	
+}
+.box_btn .mui-btn-positive{
+	width: 70%;
+	height: 35px;
+	font-size: 0.75em;
+	padding: 0;
+	background: #01CA98;
+	border: none;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #4AE6BE;
+	border-top: 1px solid #4AE6BE;
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	box-shadow: 0px 2px 1px #0D6A53;
+}
+.box_btn .mui-btn-outlined{
+	width: 30%;
+	height: 35px;
+	padding: 0;
+	font-size: 0.75em;
+	background: #665241;
+	color: white;
+	margin-left: -5px;
+	letter-spacing: 1px;
+	border: none;
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	border-bottom: 1px solid #786654;
+	border-top: 1px solid #786654;
+	box-shadow: 0px 2px 1px #786553;
+}
+/*线*/
+.box_Line{
+	margin: 3px 0 0 3px;
+	width: 60px;
+	height: 2px;
+	background: #01CA98;
+}
+
+/*会所公共样式*/
+.HuoSuo_title{
+	color: #665241;
+	font-size: 1.1em;
+}
+.box_img{
+	width: 85px;
+	height: 85px;
+	margin: 10px auto 0;
+	border: 1px solid #665241;
+	border-radius: 100%;
+	position: relative;
+}
+.box_img img{
+	border-radius: 100%;
+	margin: 9px;
+}
+.box_img .loca_top{
+	position: absolute;
+	top: -10px;
+	left: 39%;
+	color: #01CA98;
+	font-size: 18px;
+}
+.box_img .loca_bottom{
+	position: absolute;
+	bottom: -10px;
+	left: 39%;
+	color: #01CA98;
+	font-size: 18px;
+}
+.JiShi_infor{
+	width: 50%;
+	margin: 8px auto 20px;
+	color: #998573;
+	font-size: 0.9em;
+}
+.box_infor{
+	width: 100%;
+	background: white;
+	text-align: center;
+}
+
+/*底部*/
+.box_nav{
+	width: 100%;
+	height: 50px;
+	padding-top: 15px;
+	background: white;
+	margin-bottom: 30px;
+}
+.box_icon{
+	width: 30%;
+	height: 30px;
+	margin: 0 auto;
+}
+.box_icon .span_icon{
+	width: 47%;
+	height: 20px;
+	display: inline-block;
+	text-align: center;
+	margin: 0 !important;
+	color: #735C4E;
+}
+.box_icon .span_icon span{
+	font-size: 24px;
+	line-height: 20px;
+}
+.right_border{
+	border-right: 1px solid #735C4E;
+	margin-right: 10px;
+}
+
+
+
+
+
+

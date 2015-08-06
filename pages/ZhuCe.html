@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/ZhuCe.css">
+		<!--<script type="text/javascript" src="../js/mui.min.js"></script>-->
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	</head>
+	<body>
+		<div class="mui-content">
+			<div class="infor_input">
+				<span class="mui-icon iconfont icon-shouji"></span>
+				<input type="tel" placeholder="请输入您的手机号码" required=""  id="login_user" name = "Formtest[login]" />
+			</div>
+			<div class="infor_input_2">
+				<button id="btn" class="mui-btn mui-btn-outlined">获取验证码</button>
+				<span class="mui-icon mui-icon-locked"></span>
+				<input type="tel" placeholder="请输入您的验证码" required=""  id="login_user" name = "Formtest[login]" />
+			</div>
+			<div class="infor_input">
+				<span class="mui-icon iconfont icon-mima"></span>
+				<input type="tel" placeholder="请输入您的密码" required=""  id="login_user" name = "Formtest[login]" />
+			</div>
+			<div class="box_checkbox">
+				<div class="mui-input-row mui-checkbox mui-left">
+					<label>领客服务条款</label>
+					<input name="checkbox" type="checkbox">
+				</div>
+			</div>
+			
+			<div class="box_btn">
+				<button class="mui-btn mui-btn-positive">确定</button>
+				<button class="mui-btn mui-btn-outlined">取消</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			document.getElementById("btn").addEventListener("click",function(){
+					//倒计时
+					var count = 60;
+	                var countdown = setInterval(CountDown, 1000)   
+	                function CountDown() {
+	                	
+	                		if(count>0){
+	    			 			$('#btn').attr('disabled','disabled');
+		    			 	}else{
+		    			 		$('#btn').removeAttr('disabled');
+		    			 	}
+		    			 	
+	                    $("#btn").html( count + " 秒");
+	                    if (count == 0) {
+	                    		$("#btn").html('获取验证码');
+	                        clearInterval(countdown);
+	                    }
+	                    count--;
+	                }
+			   	})
+//倒计时
+		</script>
+	</body>
+</html>

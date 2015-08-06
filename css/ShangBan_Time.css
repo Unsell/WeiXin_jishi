@@ -1,0 +1,78 @@
+
+.mui-content{
+	width: 85%;
+	margin: 0 auto;
+	padding-top: 15%;
+	text-align: center;
+}
+.box_infor{
+	padding: 30px 0 ;
+}
+.infor_title{
+	color: #665241;
+	font-size: 0.7em;
+	width: 55%;
+	margin: 0 auto 20px;
+	border-bottom: 1px solid #E6D3C3;
+}
+.box_input{
+	width: 80%;
+	height: 30px;
+	margin: 10px auto 0;
+	color: #665241;
+	font-size: 0.7em;
+	line-height: 30px;
+	position: relative;
+}
+.box_input div{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.box_input input{
+	margin-left: 10%;
+	display: inline-block;
+	width: 80%;
+	height: 30px;
+	line-height: 10px;
+	text-align: center;
+	background: #F0E4DD;
+	font-size: 1em;
+	border: none;
+}
+.box_btn{
+	margin: 20px auto 40px;
+}
+
+/*弹窗---icon操作*/
+#Icon_SheZhi{
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: white;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	background: #212120;
+}
+.box_Icon_SheZhi{
+	text-align: center;
+	padding-top: 20%;
+	font-size: 0.9em;
+}
+.box_Icon_SheZhi .span_icon{
+	margin-bottom: 15%;
+}
+.box_Icon_SheZhi .span_icon span{
+	font-size: 43px;
+}
+.box_Icon_SheZhi .box_CaoZuo{
+	margin-bottom: 10%;
+}
+.box_Icon_SheZhi .box_CaoZuo .box_Line{
+	width: 50px;
+	margin:  3px auto 0;
+}
+
+
+
