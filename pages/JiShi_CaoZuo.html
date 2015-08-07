@@ -102,7 +102,7 @@
 				</div>
 			</div>
 			<div class="box_button">
-				<button class="btn_confirm">提交</button>
+				<button class="btn_confirm ShangZhong_confirm">提交</button>
 				<button class="btn_cancle">取消</button>
 			</div>
 		</div>
@@ -190,6 +190,10 @@
 		</div>
 		
 		<script type="text/javascript">
+			document.querySelector('.ShangZhong_confirm').addEventListener('tap', function() {
+			  //打开注册二维码页面
+			    window.location.href='JiShi_ShangZhong.html';
+			});
 			$(function(){
 				$('.operation_icon').css("height",$('.operation_icon').width())
 				$('.box_Icon_SheZhi>.span_icon').click(function(){

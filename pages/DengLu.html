@@ -31,10 +31,10 @@
 			</div>
 			<div class="infor_input">
 				<span class="mui-icon iconfont icon-mima"></span>
-				<input type="tel" placeholder="请输入您的密码" required=""  id="login_user" name = "Formtest[login]" />
+				<input type="password" placeholder="请输入您的密码" required=""  id="login_user" name = "Formtest[login]" />
 			</div>
 			<div class="box_a">
-				<a class="type_a" href="">找回密码</a>
+				<a class="type_a" href="ZhaoHuiMiMa.html">找回密码</a>
 			</div>
 			<div class="box_btn">
 				<button class="mui-btn mui-btn-positive">立即登录</button>
@@ -45,7 +45,20 @@
 			$(function(){
 				$('.logo_infor').css('width',$('.linkke').width());
 				$('.box_logo').css('width',$('.linkke').width()+52);
+				
+				$('.mui-btn-positive').click(function(){
+					
+				})
 			})
+			document.querySelector('.mui-btn-positive').addEventListener('tap', function() {
+			  //打开上班时间页面
+			   window.location.href='ShangBan_Time.html'
+
+			});
+			document.querySelector('.mui-btn-outlined').addEventListener('tap', function() {
+			  //打开注册页面
+			   window.location.href='ZhuCe.html'
+			});
 		</script>
 	</body>
 </html>
