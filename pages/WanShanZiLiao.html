@@ -10,18 +10,20 @@
 		<link rel="stylesheet" href="../css/iconfont.css">
 		<link rel="stylesheet" href="../css/common.css">
 		<link rel="stylesheet" href="../css/WanShanZiLiao.css">
-		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<link href="../css/mui.listpicker.css" rel="stylesheet" />
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+		
 		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	</head>
 	<body>
 		<div class="mui-content">
 			<p>您将注册在：超级美丽大水疗会所</p>
 			<div class="Box_JiShi_infor">
-				<span>真实姓名</span>
+				<div class="type_div">真实姓名<span class="red">*</span></div>
 				<input type="text" value="" />
 			</div>
 			<div class="Box_JiShi_infor">
-				<span>性别</span>
+				<div class="type_div">性别<span class="red">*</span></div>
 				<select class="XingBie" name="" id="">
 					<option value="">男</option>
 					<option value="">女</option>
@@ -29,28 +31,28 @@
 				<div class="box_line"></div>
 			</div>
 			<div class="Box_JiShi_infor">
-				<span>籍贯</span>
+				<div class="type_div">籍贯</div>
+				<input id='showCityPicker' type="text" value="" />
+			</div>
+			<div class="Box_JiShi_infor">
+				<div class="type_div">工号<span class="red">*</span></div>
 				<input type="text" value="" />
 			</div>
 			<div class="Box_JiShi_infor">
-				<span>工号</span>
-				<input type="text" value="" />
-			</div>
-			<div class="Box_JiShi_infor">
-				<span>身份证号码</span>
+				<div class="type_div">身份证号码</div>
 				<input type="text" value="" />
 			</div>
 			<div class="Box_JiSHI_infor2">
 				<div class="box_dizhi">
-					<div class="title">地址</div>
+					<div class="title">地址<span class="red">*</span></div>
 					<div class="button">
-						<button class="btn">选择城市</button>
+						<button id='showCityPicker3' class="btn">选择城市</button>
 					</div>
 					<input type="text" value="" placeholder="请输入详细地址"/>
 				</div>
 			</div>
 			<div class="Box_JiShi_infor">
-				<span>工种</span>
+				<div class="type_div">工种<span class="red">*</span></div>
 				<select class="GongZhong" name="" id="">
 					<option value="">大厅</option>
 					<option value="">房间</option>
@@ -58,7 +60,7 @@
 				</select>
 				<div class="box_line"></div>
 			</div>
-			<div class="mui-table-view-cell mui-collapse xiangmu"><a class="mui-navigate-right" href="#">项目</a>
+			<div class="mui-table-view-cell mui-collapse xiangmu"><a class="mui-navigate-right" href="#">项目<span class="red">*</span></a>
 				<ul class="mui-table-view mui-table-view-chevron">
 					<li class="mui-table-view-cell">
 						<div class="mui-input-row mui-checkbox mui-left">
@@ -81,11 +83,11 @@
 				</ul>
 			</div>
 			<div class="Box_JiShi_infor">
-				<span>入职</span>
+				<div class="type_div">入职</div>
 				<input class="Date" type="date" value="" />
 			</div>
 			<a href="#YuYan" class="YuYan">
-				<span>语言</span>
+				<div class="type_div">语言<span class="red">*</span></div>
 				<div class="text_right">普通话</div>
 			</a>
 			<div class="box_btn">
@@ -120,5 +122,43 @@
 				<button class="btn_cancle">取消</button>
 			</div>
 		</div>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+		<script src="../js/mui.listpicker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			(function($, doc) {
+				$.init();
+				$.ready(function() {
+					
+					//-----------------------------------------
+					//级联示例
+					var cityPicker = new $.PopPicker({
+						layer: 2
+					}); 
+					cityPicker.setData(cityData);
+					var showCityPickerButton = doc.getElementById('showCityPicker');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker.show(function(items) {
+							cityResult.innerText ="你选择的城市是:" + items[0].text+" " + items[1].text;
+						});
+					}, false);
+					//-----------------------------------------
+//					//级联示例
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					}); 
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker3');
+					var cityResult3 = doc.getElementById('cityResult3');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							cityResult3.innerText ="你选择的城市是:" + items[0].text+" "  + items[1].text+" " + items[2].text;
+						});
+					}, false);
+				});
+			})(mui, document);
+		</script>
 	</body>
 </html>
