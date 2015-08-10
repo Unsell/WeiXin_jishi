@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
+	    <link href="../css/mui.min.css" rel="stylesheet"/>
+	    <link href="../css/mui.listpicker.css" rel="stylesheet" />
+	    <link href="../css/mui.poppicker.css" rel="stylesheet" />
+	    <link href="../css/common.css" rel="stylesheet"/>
+	    <link href="../css/Geren_Ziliao.css" rel="stylesheet"/>
+	    <link rel="stylesheet" type="text/css" href="../css/Xiugai_Ziliao.css"/>
+	    <style type="text/css">
+	    	
+
+	    </style>
+		<title>个人资料</title>
+	</head>
+	<body>
+		<!--页面主结构开始-->
+		<div id="app" class="mui-views" >
+			<div class="mui-view">
+				<div class="mui-navbar">
+				</div>
+				<div class="mui-pages">
+				</div>
+			</div>
+		</div>
+		<!--页面主结构结束-->
+		<!--单页面开始-->		
+		<div id="setting" class="mui-page">
+			<!--页面标题栏开始-->
+			<div class=" mui-bar-nav mui-navbar-inner mui-bar ">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<h1 class="mui-center mui-title">个人资料</h1>
+			</div>
+			<!--页面标题栏结束-->
+			<!--页面主内容区开始-->
+			<div class="mui-page-content"  >
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!--用户头像-->
+						<div class="box_1">
+							<span class="size loca_3">头像</span>
+							<div class="img_border">
+								<img class="mui-action-preview" src="../images/3.png" id="portrait"/>
+							</div>
+					   </div>
+					   <!--用户姓名-->
+					   <a  href="#user_name"  class="infor Zhenshi_Xingming">
+							<div class="mui-navigate-right">
+								<span class="size loca_1">真实姓名</span>
+								<span class="size loca_2" id="name"></span>
+							</div>
+					   </a>
+						<!--用户工号-->
+						<a href="#user_num" class="infor GongHao">
+							<div class="mui-navigate-right">
+								<span class="size loca_1" >工号</span>
+								<span class="size loca_2" id="job_number"></span>
+							</div>
+						</a>
+						<!--性别选择-->
+						<a href="#user_sex" class="infor XingBie">
+							<div class="mui-navigate-right">
+								<span class="size loca_1">性别</span>
+								<span class="size loca_2" id="sex"></span>
+							</div>
+						</a>
+						<!--籍贯-->
+						<a href="#user_jiguan" class="infor JiGuan">
+							<div class="mui-navigate-right">
+								<span class="size loca_1">籍贯</span>
+								<span class="size loca_2" id="nativeplace"></span>
+							</div>
+						</a>
+						<!--身份证号码-->
+						<a href="#user_shenfen" class="infor ShenFen">
+							<div class="mui-navigate-right">
+								<span class="size loca_1" >身份证号</span>
+								<span class="size loca_2" id="ident"></span>
+							</div>
+						</a>
+						<!--地址选择-->	
+						<div class=" box_2">
+							<div class="infor">
+								<span class="size loca">地址</span>
+							</div>
+							<a href="#user_dizhi" class="">
+								<div class="mui-content-padded">
+									<button  class="mui-btn mui-btn-block" type='button' id="linkage_3">请选择地址</button>
+								</div>
+								<div class="infor XiangXi_addr mui-navigate-right">
+									<span class="size loca_1">详细地址</span>
+									<span class="size loca_2" id="address"></span>
+								</div>
+							</a>
+						</div>
+						<!--入职时间-->
+						<a href="#user_ruzhi" class="infor RuZhi">
+							<div class="mui-navigate-right">
+								<span class="size loca_1">入职</span>
+								<span class="size loca_2" id="enter_time"></span>
+							</div>
+						</a>
+						<!--工种-->
+						<a href="#user_gongzhong" class="infor GongZhong">
+							<div class="mui-navigate-right">
+								<span class="size loca_1">工种</span>
+								<span class="size loca_2" id="craft"></span>
+							</div>
+						</a>
+						<!--项目-->
+						<div class="mui-table-view-cell mui-collapse "><a class="mui-navigate-right size" href="#">项目</a>
+							<a href="#user_xiangmu" class="mui-collapse-content XiangMu">
+								<form class="mui-input-row project_list">
+								</form>
+							</a>
+						</div>
+						<!--语言-->
+						<a href="#user_yuyan" class="infor YuYan">
+							<div class="mui-navigate-right">
+								<span class="size loca_1">语言</span>
+								<span class="size loca_2" id="language"></span>
+							</div>
+						</a>
+						<!--修改密码-->
+					 	<!--<a href="#user_mima" class="infor XiuGai">
+							<div class="mui-navigate-right">			
+								<span class="size loca_1">修改密码</span>
+							</div>
+						</a>-->
+					</div>
+				</div>
+			</div>
+		</div>
+			<!--页面主内容区结束-->
+			<!--页面修改-->
+			<!--修改用户名-->	
+	
+		<div id="user_name" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class="mui-pull-right" id="btn-name">保存</a>
+				<h1 class="mui-center mui-title">修改姓名</h1>
+			</div>
+			<div class="mui-page-content">
+				 <form id="testForm" action=""> 
+					<div class="infor" >
+						<div class="mui-input-row" >
+							<input class="mui-input-clear" type="text" id="chang_name" required=""  placeholder="请输入姓名"/>
+						</div>
+					</div>
+				
+				 </form> 
+			</div>
+		</div>
+	
+		<!--修改工号-->
+		<div id="user_num" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right job_number">保存</a>
+				<h1 class="mui-center mui-title">修改工号</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="infor">
+					<div class="mui-input-row">
+						<input class="mui-input-clear" type="number" id="change_number"  placeholder="请选择工号"   data-max="4"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--修改性别-->	
+		<div id="user_sex" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right user_sex">保存</a>
+				<h1 class="mui-center mui-title">修改性别</h1>
+			</div>
+			<div class="mui-page-content">
+				<form class="mui-input-group">
+					<div class="mui-input-row mui-radio mui-left">
+						<label>男</label>
+						<input name="sex" type="radio" value='1' id="man" class="ck_sex">
+					</div>
+					<div class="mui-input-row mui-radio mui-left">
+						<label>女</label>
+						<input name="sex" type="radio" value='2' id="woman" class="ck_sex">
+					</div>
+				</form>	
+			</div>
+		</div>
+		<!--修改籍贯-->	
+		<div id="user_jiguan" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right " id="native">保存</a>
+				<h1 class="mui-center mui-title">修改籍贯</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="infor">
+					<div class="mui-input-row">
+						<input class="mui-input-clear" type="text" placeholder="请选择地址" id="JiGuan" readonly="readonly" />
+						<input type="hidden" name="" id="na_pr" value=""/>
+						<input type="hidden" name="" id="na_city"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--修改身份证号-->	
+		<div id="user_shenfen" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right" id="btn_ident">保存</a>
+				<h1 class="mui-center mui-title">修改身份证号</h1>
+			</div>
+			<div class="mui-page-content">
+				<form id="testForm" >
+					<div class="infor">
+					<div class="mui-input-row">
+						<input class="mui-input-clear" type="text" id="ck_ident" placeholder="请输入身份证号" pattern="/(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/"  required=""/>
+					</div>
+				</div>
+				</form>
+				
+			</div>
+		</div>
+		<!--修改地址-->	
+		<div id="user_dizhi" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right" id="btn-address">保存</a>
+				<h1 class="mui-center mui-title">修改地址</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="box_2">
+					<div class="mui-content-padded">
+						<button id='showCityPicker2' class="mui-btn mui-btn-block" type='button'>选择地区</button>
+						<input type="hidden" name="" id="ad_pr"/>
+						<input type="hidden" name="" id="ad_city"/>
+						<input type="hidden" name="" id="ad_area"/>
+					</div>
+					<div class="infor">
+						<form id="testForm" action=""> 
+							<div class="mui-input-row">
+								<input class="poll_code" type="text" placeholder="请选择详细地址" id="ck_address"   required="" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--修改入职时间-->	
+		<div id="user_ruzhi" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right " id="btn_work">保存</a>
+				<h1 class="mui-center mui-title">修改入职时间</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="infor">
+					<div class="mui-input-row">
+						<input id="work_time" readonly="" type="text"  required="" placeholder="请输选择入职时间" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--修改工种-->	
+		<div id="user_gongzhong" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right " id="btn-craft">保存</a>
+				<h1 class="mui-center mui-title">修改工种</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="mui-select chang_gongzhong">
+					<span>工种</span>
+					<select id="change_craft" >
+					</select>
+				</div>
+				<div class="xiangmu_tip">请选择项目：</div>
+				<div class="box">
+					<form class="mui-input-row change_project_list">
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--修改语言-->	
+		<div id="user_yuyan" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right " id="btn-language">保存</a>
+				<h1 class="mui-center mui-title">修改语言</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="box">
+					<form class="mui-input-row" id="language_form">
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>粤语</label>
+							<input name="checkbox" type="checkbox" value="1" class="language">
+						</div>
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>普通话</label>
+							<input name="checkbox" type="checkbox" value="2" class="language">
+						</div>
+						<div class=" mui-input-row mui-checkbox mui-left">
+							<label>英语</label>
+							<input name="checkbox" type="checkbox" value="3" class="language">
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--修改密码-->	
+		<div id="user_mima" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class=" mui-pull-right " id="btn-pwd">保存</a>
+				<h1 class="mui-center mui-title">修改密码</h1>
+			</div>
+			<div class="mui-page-content">
+
+					<div class="infor">
+						<span class="size">旧密码</span>
+						<input class="input_size" type="password" data-min="6" id="old_pwd"/>
+					</div>
+					<div class="infor">
+						<span class="size">新密码</span>
+						<input class="input_size" type="password" data-min="6" id="pwd"/>
+					</div>
+					<div class="infor">
+						<span class="size">确定新密码</span>
+						<input class="input_size_2" type="password" data-min="6" id="apwd"/>
+					</div>
+
+			</div>
+		</div>
+		
+</body>
+		<script src="../js/mui.view.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/mui.listpicker.js"></script>
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+     
+//		主页结构信息，和切换
+		mui.init();
+		 //初始化单页view
+		var viewApi = mui('#app').view({
+			defaultPage: '#setting'
+		});
+		 //初始化单页的区域滚动
+		mui('.mui-scroll-wrapper').scroll();
+		
+		var view = viewApi.view;
+		(function($) {
+			//处理view的后退与webview后退
+			var oldBack = $.back;
+			$.back = function() {
+				if (viewApi.canBack()) { //如果view可以后退，则执行view的后退
+					viewApi.back();
+				} else { //执行webview后退
+					oldBack();
+				}
+			};
+			//监听页面切换事件方案1,通过view元素监听所有页面切换事件，目前提供pageBeforeShow|pageShow|pageBeforeBack|pageBack四种事件(before事件为动画开始前触发)
+		
+			view.addEventListener('pageBeforeBack', function(e) {
+
+			});
+			view.addEventListener('pageBack', function(e) {
+
+			});
+		})(mui);
+		
+
+				// 在这里调用plus api
+	             (function($, doc) {
+					$.ready(function() {
+						//级联示例
+						var cityPicker = new $.PopPicker({
+							layer: 2
+						}); 
+						cityPicker.setData(cityData);
+						var JiGuan = doc.getElementById('JiGuan');
+						JiGuan.addEventListener('tap', function(event) {
+							cityPicker.show(function(items) {
+								JiGuan.value = items[0].text + items[1].text;
+								var na_pr = document.querySelector('#na_pr'),
+								na_city = document.querySelector('#na_city');
+								na_pr.value=items[0].value;
+								na_city.value=items[1].value;
+							});
+						}, false);
+
+						
+						//3级联示例
+						var cityPicker3 = new $.PopPicker({
+							layer: 3
+						}); 
+						cityPicker3.setData(cityData3);
+						var showCityPickerButton = doc.getElementById('showCityPicker2');
+						showCityPickerButton.addEventListener('tap', function(event) {
+							cityPicker3.show(function(items) {
+								showCityPickerButton.innerText = items[0].text + items[1].text + items[2].text;
+								var ad_pr=document.querySelector('#ad_pr'),
+									ad_city=document.querySelector('#ad_city'),
+									ad_area=document.querySelector('#ad_area');
+									ad_pr.value=items[0].value;
+									ad_city.value=items[1].value;
+									ad_area.value=items[2].value;
+							});
+						}, false);
+						
+					});
+				})(mui, document);
+				
+			
+			
+			
+
+		
+</script>
+		
+	
+</html>

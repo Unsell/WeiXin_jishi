@@ -39,6 +39,7 @@
 	background: #F0E4DD;
 	font-size: 1em;
 	border: none;
+	padding: 0 15px !important;
 }
 .box_btn{
 	margin: 20px auto 40px;

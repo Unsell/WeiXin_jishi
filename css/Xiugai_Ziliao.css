@@ -1,0 +1,199 @@
+
+.mui-bar .mui-pull-right{
+	font-size: 14px;
+	text-decoration:underline;
+	line-height: 40px;
+	color: #0A7D61;
+	letter-spacing: 1px;
+}
+
+
+.mui-icon-clear:before{
+	position: absolute;
+	right: 30px ;
+	top: -10px;
+}
+.mui-input-row .mui-input-clear~.mui-icon-clear{
+	width: 100%;
+	color: #CCCCCC;
+}
+
+//修改性别
+.mui-table-view-cell:after{
+	height: 0 !important;
+}
+
+//多选按钮
+
+
+.mui-table-view-cell.mui-checkbox.mui-left{
+  padding-left: 30px;
+  padding-right: 5px;
+  font-size: 13px;
+  width: auto;
+  float: right;
+}
+.mui-checkbox.mui-left input[type=checkbox]{
+  left: 0;
+ 
+}
+.mui-table-view-cell:after {
+  height: 0;
+}
+
+/*修改地址*/
+.box_2{
+	padding-top: 10px;
+	margin-bottom: 5px;
+	background: white;
+}
+.box_2 .infor .poll_code{
+	height: 40px;
+	color: #938799;
+	padding: 10px 15px;
+}
+#showCityPicker{
+	padding: 8px 0;
+}
+/*修改项目*/
+.box{
+	background: white;
+	padding-left: 5%;
+}
+.mui-checkbox.mui-left label{
+  padding-left: 40px;
+}
+
+/*修改密码*/
+#user_mima .mui-bar .mui-pull-right{
+	font-size: 14px;
+	text-decoration:underline;
+	line-height: 40px;
+	color: #0A7D61;
+	letter-spacing: 1px;
+}
+#user_mima .size{
+	color: #B1AFAF;
+	letter-spacing: 2px;
+	font-size: 14px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+#user_mima .input_size[type=password]{
+	display: inline;
+	width: 100%;
+	border: none;
+	height: 39px;
+	text-align: right;
+	color: #00ACEF;
+}
+#user_mima .input_size_2[type=password]{
+	display: inline;
+	width: 100%;
+	border: none;
+	height: 39px;
+	text-align: right;
+	color: #00ACEF;
+}
+#user_mima input[type=password]:focus{
+	border: 1px solid #41D7B0;
+}
+/*radio和checkbox的样式*/
+form{
+	color: #938799;
+}
+.mui-input-group .mui-input-row {
+  height: 50px;
+  line-height: 50px;
+}
+.mui-radio input[type=radio]:before{
+	line-height: 45px;
+}
+body{
+	font-family: "Microsoft YaHei","iconfont"  !important;
+	background: #FAF1E9;
+}
+.bold{
+	font-weight: bold;
+}
+/*header*/
+.mui-bar-nav{
+	height: 0 !important;
+	background: #FAF1E9;
+	box-shadow:none
+}
+.mui-title{
+	letter-spacing: 2px;
+	color: #6A6A74;
+	margin: 0px;
+}
+.mui-bar-nav .mui-icon{
+	color: #656570;
+}
+.mui-pull-right{
+	height: 40px;
+	width: 40px;
+	text-align: right;
+}
+/*内容主题框*/
+.mui-content{
+	/*position: relative;*/
+	background: #FAF1E9;
+}
+.mt30{
+	margin-top: 30px;
+}
+
+/*输入框*/
+.infor{
+	display: block;
+	margin-top: 1px;
+	width: 100%;
+	height: 40px;
+	background: white;
+	position: relative;
+	
+}
+.infor .mui-icon{
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 17px;
+	line-height: 40px;
+	color: #70CAEC;
+	margin-left: 5px;
+}
+.infor span{
+	
+}
+.infor input{
+	border-color: white;
+	display: inline-block;
+	line-height: 20px;
+	padding-left: 40px;
+	border-radius: 0;
+	border: 1px solid #E6D3C3;
+}
+input::-webkit-input-placeholder {
+	color: #A1A1A1 !important; 
+	font-size: 14px;
+}
+input:focus{
+	border: 1px solid #41D7B0;
+	/*border-radius: 0;*/
+}
+
+/*提交按钮*/
+.public_btn{
+	display: block;
+	border: none;
+	width: 80%;
+	background: #01CA98;
+	margin: 10px auto;
+	letter-spacing: 5px;
+	padding: 10px 20px;
+	font-size: 14px;
+	color: white;
+	text-align: center;
+}
