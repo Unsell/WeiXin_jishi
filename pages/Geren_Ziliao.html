@@ -152,11 +152,11 @@
 			</div>
 			<div class="mui-page-content">
 				<div class="box_img">
-					<img class="mui-action-preview" src="../images/0.jpg" alt="" />
+					<img class="mui-action-preview ShangChuan" src="../images/0.jpg" alt="" />
 				</div>
 				<lable class="mui-btn mui-btn-positive">
 					<span>上传头像</span>
-					<input type="file" name="fileselect" id="" value="" multiple=""/>
+					<input class="fileselect" type="file" name="fileselect" id="" value="" multiple=""/>
 				</lable>
 				<p>*此头像将不会在技师列表显示！</p>
 			</div>
@@ -181,7 +181,6 @@
 				 </form> 
 			</div>
 		</div>
-
 		<!--修改工号-->
 		<div id="user_num" class="mui-page">
 			<div class="mui-navbar-inner mui-bar mui-bar-nav">
@@ -420,7 +419,16 @@
 		})(mui);
 		
 		$(function(){
-
+			//图片显示
+			var img = document.querySelector('.ShangChuan');
+			var fileSelect = document.querySelector('.fileselect');
+			fileSelect.addEventListener('change',displayFile,false);
+			function displayFile(event){
+				// console.log(event);
+				var file = event.target.files;
+				var url = window.URL.createObjectURL(file);
+				img.src = url;
+			}
 		//图片放大
 		var imgs = document.querySelectorAll("img.mui-action-preview");
 
