@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>技师班次</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/iconfont.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/JiShi_BanCi.css">
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">班次</h1>
+			<a class="mui-pull-right" id="btn-name">保存</a>
+		</header>
+		<div class="mui-content">
+			<div class="BanCi_infor">
+				<div class="infor">
+					<div class="banci_name">A班</div>
+					<div class="banci_time">
+						<span class="mui-icon iconfont icon-dian"></span>
+						<span class="time">08:00~18:00</span>
+					</div>
+				</div>
+				<button class="btn type_chosen">已选</button>
+			</div>
+			<div class="BanCi_infor">
+				<div class="infor">
+					<div class="banci_name">A班</div>
+					<div class="banci_time">
+						<span class="mui-icon iconfont icon-dian"></span>
+						<span class="time">08:00~18:00</span>
+					</div>
+				</div>
+				<button class="btn type_Nochosen">选择</button>
+			</div>
+			<div class="BanCi_infor">
+				<div class="infor">
+					<div class="banci_name">A班</div>
+					<div class="banci_time">
+						<span class="mui-icon iconfont icon-dian"></span>
+						<span class="time">08:00~18:00</span>
+					</div>
+				</div>
+				<button class="btn type_Nochosen">选择</button>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$('.btn').on('click',function(){
+					$('.btn').each(function(){
+						$('.btn').html('选择');
+						$('.btn').attr('class','btn type_Nochosen');
+					})
+					$(this).html('已选');
+					$(this).attr('class','btn type_chosen');
+				})
+
+			})
+		</script>
+	</body>
+</html>

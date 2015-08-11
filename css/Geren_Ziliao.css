@@ -16,7 +16,6 @@ ul,li{
 	background: white;
 	margin-bottom: 5px;
 	position: relative;
-	
 }
 .loca_3{
 	position: absolute;
@@ -30,15 +29,15 @@ ul,li{
 	background: #01CA98;
 	position: absolute;
 	top: 6px;
-	right: 20px;
+	right: 30px;
 }
 .img_border img{
-	
 	margin: 1px;
 	width: 55px;
 	height: 55px;
 	border-radius:50%;
 }
+
 .size{
 	font-size: 15px;
 	color: #938799;
@@ -275,6 +274,37 @@ h5.mui-content-padded:first-child {
 				z-index: 20;
             background-color: rgb(77, 73, 73);
 			}
+			
+/*修改头像*/
+#user_img{
+	text-align: center;
+}
+#user_img .box_img{
+	width: 150px;
+	height: 150px;
+	margin: 15% auto 7%;
+	border-radius: 50%;
+	border: none;
+}
+#user_img .box_img>img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: 0;
+}
+#user_img .mui-btn-positive{
+	background: #02CB99;
+	width: 50%;
+	border: none;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+	border-bottom: 1px solid #44AC91;
+}
+#user_img p{
+	margin-top: 15px;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+}
 /*修改工种*/
 #user_gongzhong .chang_gongzhong{
 	color: #938799;

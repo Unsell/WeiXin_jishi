@@ -43,12 +43,14 @@
 				<div class="mui-scroll-wrapper">
 					<div class="mui-scroll">
 						<!--用户头像-->
-						<div class="box_1">
-							<span class="size loca_3">头像</span>
-							<div class="img_border">
-								<img class="mui-action-preview" src="../images/3.png" id="portrait"/>
-							</div>
-					   </div>
+						<a href="#user_img">
+							<div class="mui-navigate-right box_1">
+								<span class="size loca_3">头像</span>
+								<div class="img_border">
+									<img class="mui-action-preview" src="../images/3.png" id="portrait"/>
+								</div>
+						   </div>
+						</a>
 					   <!--用户姓名-->
 					   <a  href="#user_name"  class="infor Zhenshi_Xingming">
 							<div class="mui-navigate-right">
@@ -139,8 +141,25 @@
 		</div>
 			<!--页面主内容区结束-->
 			<!--页面修改-->
-			<!--修改用户名-->	
+		<!--修改用户图片-->		
+		<div id="user_img" class="mui-page">
+			<div class="mui-navbar-inner mui-bar mui-bar-nav">
+				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</button>
+				<a class="mui-pull-right" id="btn-name">保存</a>
+				<h1 class="mui-center mui-title">头像</h1>
+			</div>
+			<div class="mui-page-content">
+				<div class="box_img">
+					<img class="mui-action-preview" src="../images/0.jpg" alt="" />
+				</div>
+				<button class="mui-btn mui-btn-positive">上传头像</button>
+				<p>*此头像将不会在技师列表显示！</p>
+			</div>
+		</div>
 	
+		<!--修改用户名-->	
 		<div id="user_name" class="mui-page">
 			<div class="mui-navbar-inner mui-bar mui-bar-nav">
 				<button type="button" class="mui-left mui-action-back mui-btn  mui-btn-link mui-btn-nav mui-pull-left">
@@ -173,7 +192,7 @@
 			<div class="mui-page-content">
 				<div class="infor">
 					<div class="mui-input-row">
-						<input class="mui-input-clear" type="number" id="change_number"  placeholder="请选择工号"   data-max="4"/>
+						<input class="mui-input-clear" type="number" id="change_number"  placeholder="请输入工号"   data-max="4"/>
 					</div>
 				</div>
 			</div>
@@ -278,7 +297,7 @@
 			<div class="mui-page-content">
 				<div class="infor">
 					<div class="mui-input-row">
-						<input id="work_time" readonly="" type="text"  required="" placeholder="请输选择入职时间" />
+						<input  type="date"  required="" placeholder="请输选择入职时间" />
 					</div>
 				</div>
 			</div>
@@ -398,6 +417,64 @@
 			});
 		})(mui);
 		
+		$(function(){
+							//图片放大
+		var imgs = document.querySelectorAll("img.mui-action-preview");
+
+			imgs = mui.slice.call(imgs);
+			var slider = null;
+			if(imgs&&imgs.length>0){
+				slider = document.createElement("div");
+				slider.setAttribute("id","__mui-imageview__");
+				slider.classList.add("mui-slider");
+				slider.classList.add("mui-fullscreen");
+				slider.style.display = "none";
+				slider.addEventListener("tap",function () {
+					slider.style.display = "none";
+				});
+				slider.addEventListener("touchmove",function (event) {
+					event.preventDefault();
+				})
+				
+				var slider_group = document.createElement("div");
+				slider_group.setAttribute("id","__mui-imageview__group");
+				slider_group.classList.add("mui-slider-group");
+				
+				imgs.forEach(function (value,index,array) {
+
+					var tou=localStorage.getItem('tou')
+					//给图片添加点击事件，触发预览显示；
+
+					value.addEventListener('tap',function () {
+						slider.style.display = "block";
+					})
+					
+					var item = document.createElement("div");
+					item.classList.add("mui-slider-item");
+					var a = document.createElement("a");
+					// a.setAttribute("href","#");
+					var img = document.createElement("img");
+					img.setAttribute("src",value.src);
+					a.appendChild(img)
+					item.appendChild(a);
+					slider_group.appendChild(item);
+				});
+				
+				slider.appendChild(slider_group);
+				document.body.appendChild(slider);
+				var _slider = mui(slider).slider();
+			}
+			
+			var oldback = mui.back;
+			mui.back = function () {
+				if(slider&&slider.style.display=="block"){
+					slider.style.display = "none";
+				}else{
+					oldback();
+				}
+			}
+		});
+
 
 				// 在这里调用plus api
 	             (function($, doc) {

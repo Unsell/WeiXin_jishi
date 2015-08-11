@@ -1,0 +1,84 @@
+
+/*header*/
+.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow:none
+}
+.mui-title{
+	letter-spacing: 2px;
+	color: #6A6A74;
+	margin: 0px;
+}
+.mui-bar-nav .mui-icon{
+	color: #656570;
+}
+
+.mui-bar .mui-pull-right{
+	height: 40px;
+	width: 40px;
+	text-align: right;
+	font-size: 14px;
+	text-decoration:underline;
+	line-height: 40px;
+	color: #0A7D61;
+	letter-spacing: 1px;
+}
+
+.mui-content{
+	padding-top: 55px !important;
+}
+.BanCi_infor{
+	width: 95%;
+	height: 90px;
+	margin: 0 auto;
+	padding-top: 20px;
+	background: white;
+	color: #938799;
+	margin-bottom: 8px;
+	position: relative;
+	border: 1px solid #EDDFD5;
+	box-shadow: 0px 1px 1px #E6DBD1;
+}
+
+.banci_name{
+	margin-left: 20px;
+	width: 40%;
+	border-bottom: 1px solid #F7F0EB;
+	font-size: 1em;
+}
+.banci_time{
+	margin-top: 3px;
+	font-size: 0.75em !important;
+}
+.banci_time .icon-dian{
+	display: inline-block;
+	margin-left: 6px;
+	font-size: 0.75em !important;
+}
+.banci_time .time{
+	display: inline-block;
+	width: 50%;
+	border-bottom: 1px solid #F7F0EB;
+}
+.type_chosen{
+	position: absolute;
+	top: 20px;
+	right: 5%;
+	font-size: 0.7em;
+	padding: 4px 18px;
+	border: none;
+	color: #938799;
+	background: #D1C8C0;
+}
+.type_Nochosen{
+	position: absolute;
+	top: 20px;
+	right: 5%;
+	font-size: 0.7em;
+	padding: 4px 18px;
+	border: none;
+	color: white;
+	background: #02CB99;
+}
+
+

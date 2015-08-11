@@ -207,7 +207,10 @@ input:focus{
 	padding-left: 10px;
 }
 #BaoZhong .span_type{
+	display: inline-block;
 	letter-spacing: 30px;
+	font-size: 0.8em;
+  	padding: 0 3px 0 8px;
 }
 #BaoZhong .margin_left input{
 	margin-left: -33px;
