@@ -88,6 +88,9 @@
 .box_Icon_SheZhi .box_CaoZuo{
 	margin-bottom: 10%;
 }
+.box_Icon_SheZhi .box_CaoZuo a{
+	color: white;
+}
 .box_Icon_SheZhi .box_CaoZuo .box_Line{
 	width: 50px;
 	margin:  3px auto 0;

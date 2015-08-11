@@ -424,14 +424,14 @@
 			var fileSelect = document.querySelector('.fileselect');
 			fileSelect.addEventListener('change',displayFile,false);
 			function displayFile(event){
-				// console.log(event);
+				//console.log(event);
 				var file = event.target.files;
-				var url = window.URL.createObjectURL(file);
+				//console.log(file[0].size);
+				var url = window.URL.createObjectURL(file[0]);
 				img.src = url;
 			}
-		//图片放大
-		var imgs = document.querySelectorAll("img.mui-action-preview");
-
+			//图片放大
+			var imgs = document.querySelectorAll("img.mui-action-preview");
 			imgs = mui.slice.call(imgs);
 			var slider = null;
 			if(imgs&&imgs.length>0){
@@ -455,11 +455,9 @@
 
 					var tou=localStorage.getItem('tou')
 					//给图片添加点击事件，触发预览显示；
-
 					value.addEventListener('tap',function () {
 						slider.style.display = "block";
 					})
-					
 					var item = document.createElement("div");
 					item.classList.add("mui-slider-item");
 					var a = document.createElement("a");
