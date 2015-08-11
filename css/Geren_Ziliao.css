@@ -295,10 +295,20 @@ h5.mui-content-padded:first-child {
 #user_img .mui-btn-positive{
 	background: #02CB99;
 	width: 50%;
+	height: 35px;
 	border: none;
+	position: relative;
 	font-size: 0.75em;
 	letter-spacing: 1px;
 	border-bottom: 1px solid #44AC91;
+}
+#user_img .mui-btn-positive span{
+	position: absolute;
+	top: 9px;
+	left: 37%;
+}
+#user_img input[type=file]{
+	opacity: 0;
 }
 #user_img p{
 	margin-top: 15px;

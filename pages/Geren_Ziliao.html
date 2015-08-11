@@ -154,11 +154,13 @@
 				<div class="box_img">
 					<img class="mui-action-preview" src="../images/0.jpg" alt="" />
 				</div>
-				<button class="mui-btn mui-btn-positive">上传头像</button>
+				<lable class="mui-btn mui-btn-positive">
+					<span>上传头像</span>
+					<input type="file" name="fileselect" id="" value="" multiple=""/>
+				</lable>
 				<p>*此头像将不会在技师列表显示！</p>
 			</div>
 		</div>
-	
 		<!--修改用户名-->	
 		<div id="user_name" class="mui-page">
 			<div class="mui-navbar-inner mui-bar mui-bar-nav">
@@ -179,7 +181,7 @@
 				 </form> 
 			</div>
 		</div>
-	
+
 		<!--修改工号-->
 		<div id="user_num" class="mui-page">
 			<div class="mui-navbar-inner mui-bar mui-bar-nav">
@@ -418,7 +420,8 @@
 		})(mui);
 		
 		$(function(){
-							//图片放大
+
+		//图片放大
 		var imgs = document.querySelectorAll("img.mui-action-preview");
 
 			imgs = mui.slice.call(imgs);
