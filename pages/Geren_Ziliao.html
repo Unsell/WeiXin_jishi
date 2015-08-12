@@ -2,7 +2,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-	    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	    <script src="../js/jquery-2.1.0.js"></script>
 	    <script src="../js/mui.min.js"></script>
 	    <link href="../css/mui.min.css" rel="stylesheet"/>
@@ -46,11 +48,11 @@
 						<a href="#user_img">
 							<div class="mui-navigate-right box_1">
 								<span class="size loca_3">头像</span>
-								<div class="img_border">
-									<img class="mui-action-preview" src="../images/3.png" id="portrait"/>
-								</div>
 						   </div>
 						</a>
+						<div class="img_border">
+							<img class="mui-action-preview" src="../images/3.png" id="portrait"/>
+						</div>
 					   <!--用户姓名-->
 					   <a  href="#user_name"  class="infor Zhenshi_Xingming">
 							<div class="mui-navigate-right">
@@ -152,7 +154,7 @@
 			</div>
 			<div class="mui-page-content">
 				<div class="box_img">
-					<img class="mui-action-preview ShangChuan" src="../images/0.jpg" alt="" />
+					<img class="ShangChuan mui-action-preview" src="../images/0.jpg" alt="" />
 				</div>
 				<lable class="mui-btn mui-btn-positive">
 					<span>上传头像</span>
@@ -452,12 +454,14 @@
 				slider_group.classList.add("mui-slider-group");
 				
 				imgs.forEach(function (value,index,array) {
-
-					var tou=localStorage.getItem('tou')
 					//给图片添加点击事件，触发预览显示；
 					value.addEventListener('tap',function () {
 						slider.style.display = "block";
+						//alert(value.src);
+						_slider.refresh();
+						_slider.gotoItem(index,0);
 					})
+					
 					var item = document.createElement("div");
 					item.classList.add("mui-slider-item");
 					var a = document.createElement("a");

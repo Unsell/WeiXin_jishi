@@ -17,6 +17,7 @@
 	background: white;
 	margin-bottom: 1px;
 	position: relative;
+	overflow: hidden;
 }
 .Box_JiShi_infor .type_div{
 	position: absolute;
@@ -37,12 +38,12 @@
 	border-bottom: 1px solid #D3D2D2;
 }
 .Box_JiShi_infor .XingBie{
-	width: 96%;
+	width: 20%;
 	height: 40px;
-	margin: 0 2%;
 	color: #938799;
 	font-size: 0.85em;
-	padding-left: 86%;
+	float: right;
+	text-align: center;
 	padding-right: 0;
 }
 
@@ -81,19 +82,19 @@
 	color: #938799;
 }
 .Box_JiShi_infor .GongZhong{
-	width: 96%;
+	width: 35%;
 	height: 40px;
-	margin: 0 2%;
 	color: #938799;
 	font-size: 0.85em;
-	padding-left: 83%;
-	padding-right: 0;
+	float: right;
 }
-.Box_JiShi_infor .box_line{
-	width: 96%;
-	height: 1px;
-	margin: 0 auto;
-	background: #D3D2D2;
+.Box_JiShi_infor .GongZhong>option>div{
+	text-align: right !important;
+	
+}
+.text_right{
+	width: 100%;
+	text-align: right;
 }
 .Box_JiShi_infor .Date{
 	text-align: right !important;

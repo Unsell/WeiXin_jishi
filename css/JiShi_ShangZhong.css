@@ -174,8 +174,23 @@ input:focus{
 	font-size: 0.8em;
 	padding-left: 10px;
 }
+#BaoZhong .mui-select:before {
+  	right: 25px;
+}
+#BaoZhong .infor_customer select{
+	display: inline-block;
+	width: 65%;
+	height: 32px;
+	background: #F0E4DD;
+	padding: 0 5px;
+	border: none;
+	font-size: 0.8em;
+}
 #BaoZhong .span_type{
+	display: inline-block;
 	letter-spacing: 30px;
+	font-size: 0.8em;
+  	padding: 0 3px 0 8px;
 }
 #BaoZhong .margin_left input{
 	margin-left: -33px;

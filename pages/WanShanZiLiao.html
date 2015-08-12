@@ -25,10 +25,10 @@
 			<div class="Box_JiShi_infor">
 				<div class="type_div">性别<span class="red">*</span></div>
 				<select class="XingBie" name="" id="">
+					<option value="">请选择</option>
 					<option value="">男</option>
 					<option value="">女</option>
 				</select>
-				<div class="box_line"></div>
 			</div>
 			<!--<div class="Box_JiShi_infor">
 				<div class="type_div">籍贯</div>
@@ -54,11 +54,11 @@
 			<div class="Box_JiShi_infor">
 				<div class="type_div">工种<span class="red">*</span></div>
 				<select class="GongZhong" name="" id="">
-					<option value="">大厅</option>
-					<option value="">房间</option>
-					<option value="">美容</option>
+					<option value="">请选择工种</option>
+					<option value="">&nbsp&nbsp&nbsp&nbsp&nbsp大厅</option>
+					<option value="">&nbsp&nbsp房间</option>
+					<option value="">&nbsp&nbsp美容</option>
 				</select>
-				<div class="box_line"></div>
 			</div>
 			<div class="mui-table-view-cell mui-collapse xiangmu"><a class="mui-navigate-right" href="#">项目<span class="red">*</span></a>
 				<ul class="mui-table-view mui-table-view-chevron">
@@ -133,18 +133,18 @@
 				$.ready(function() {
 					
 					//-----------------------------------------
-					//级联示例
-					var cityPicker = new $.PopPicker({
-						layer: 2
-					}); 
-					cityPicker.setData(cityData);
-					var showCityPickerButton = doc.getElementById('showCityPicker');
-					showCityPickerButton.addEventListener('tap', function(event) {
-						cityPicker.show(function(items) {
-							cityResult.innerText ="你选择的城市是:" + items[0].text+" " + items[1].text;
-						});
-					}, false);
-					//-----------------------------------------
+//					//级联示例
+//					var cityPicker = new $.PopPicker({
+//						layer: 2
+//					}); 
+//					cityPicker.setData(cityData);
+//					var showCityPickerButton = doc.getElementById('showCityPicker');
+//					showCityPickerButton.addEventListener('tap', function(event) {
+//						cityPicker.show(function(items) {
+//							cityResult.innerText ="你选择的城市是:" + items[0].text+" " + items[1].text;
+//						});
+//					}, false);
+//					//-----------------------------------------
 //					//级联示例
 					var cityPicker3 = new $.PopPicker({
 						layer: 3
