@@ -67,8 +67,8 @@
 }
 .box_dizhi .button{
 	height: 45px;
-	border-top: 1px solid #D3D2D2;
-	border-bottom: 1px solid #D3D2D2;
+	border-top: 1px solid #FAF1E9;
+	border-bottom: 1px solid #FAF1E9;
 }
 .box_dizhi .button .btn{
 	width: 80%;
@@ -87,11 +87,9 @@
 	color: #938799;
 	font-size: 0.85em;
 	float: right;
+	display: none;
 }
-.Box_JiShi_infor .GongZhong>option>div{
-	text-align: right !important;
-	
-}
+
 .text_right{
 	width: 100%;
 	text-align: right;
@@ -113,6 +111,7 @@
 .mui-table-view-cell:after{
 	width: 96%;
 	left: 2%;
+	background-color: #FAF1E9;
 }
 .YuYan{
 	display: block;
@@ -138,13 +137,91 @@
 	font-size: 0.85em;
 	text-align: right;
 	padding-right: 3%;
-	border-bottom: 1px solid #D3D2D2;
+	/*border-bottom: 1px solid #D3D2D2;*/
 }
 
 .box_btn{
 	width: 86%;
 	margin: 30px auto;
 }
+/*弹窗---语言*/
+#XingBie{
+	position: fixed;
+	top: 15% !important;
+	color: #665241;
+	width: 82%;
+	height: 220px;
+	background: white;
+	margin: 0 9%;
+}
+.box_yuyan{
+	width: 100%;
+	padding: 5% 8% 0;
+}
+#XingBie .box_Line{
+	width: 50px;
+	margin-bottom: 5%;
+}
+#XingBie .type_yuyan{
+	margin: 20px 0;
+}
+#XingBie .box_button{
+	margin-top: 40px;
+}
+.box_button button{
+	width: 50%;
+	border: none;
+	height: 45px;
+	color: #665241;
+	border-radius: 0;
+}
+.box_button .btn_confirm{
+	background: #E3D6CF;
+}
+.box_button .btn_cancle{
+	margin-left: -5px;
+	background: #ECE3DB;
+}
+
+/*弹窗---语言*/
+#GongZhong{
+	position: fixed;
+	top: 15% !important;
+	color: #665241;
+	width: 82%;
+	height: 250px;
+	background: white;
+	margin: 0 9%;
+}
+.box_yuyan{
+	width: 100%;
+	padding: 5% 8% 0;
+}
+#GongZhong .box_Line{
+	width: 50px;
+	margin-bottom: 5%;
+}
+#GongZhong .type_yuyan{
+	margin: 20px 0;
+}
+#GongZhong .box_button{
+	margin-top: 40px;
+}
+.box_button button{
+	width: 50%;
+	border: none;
+	height: 45px;
+	color: #665241;
+	border-radius: 0;
+}
+.box_button .btn_confirm{
+	background: #E3D6CF;
+}
+.box_button .btn_cancle{
+	margin-left: -5px;
+	background: #ECE3DB;
+}
+
 /*弹窗---语言*/
 #YuYan{
 	position: fixed;
