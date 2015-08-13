@@ -167,18 +167,36 @@
 					<div>选择语言</div>
 					<div class="box_Line"></div>
 				</div>
-				<div class="type_yuyan">
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>普通话</label>
-						<input name="checkbox" type="checkbox">
-					</div>
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>粤语</label>
-						<input name="checkbox" type="checkbox">
-					</div>
-					<div class="mui-input-row mui-checkbox mui-left">
-						<label>英语</label>
-						<input name="checkbox" type="checkbox">
+				<div id="Type_YuYan" class="type_yuyan  mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>普通话</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>粤语</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>英语</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>英语</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>英语</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>英语</label>
+							<input name="checkbox" type="checkbox">
+						</div>
+						<div class="mui-input-row mui-checkbox mui-left">
+							<label>英语</label>
+							<input name="checkbox" type="checkbox">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -197,7 +215,9 @@
 				$('#Type_GongZhong').scroll({
 					indicators: true //是否显示滚动条
 				});
-				
+				$('#Type_YuYan').scroll({
+					indicators: true //是否显示滚动条
+				});
 			})(mui);
 			(function($, doc) {
 				$.init();

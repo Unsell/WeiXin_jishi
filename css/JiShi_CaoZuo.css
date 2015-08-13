@@ -103,6 +103,14 @@ body{
 	font-size: 0.8em;
 	padding-left: 20px;
 }
+.box_ShangZhong .suopai select{
+	width: 20% !important;
+	padding: 0 3px !important;
+}
+.box_ShangZhong .suopai input{
+	width: 56%;
+	text-align: center;
+}
 input:focus{
 	border: 1px solid #41D7B0;
 	/*border-radius: 0;*/
@@ -205,6 +213,14 @@ input:focus{
 	border: none;
 	font-size: 0.8em;
 	padding-left: 10px;
+}
+.box_BaoZhong .suopai select{
+	width: 20% !important;
+	padding: 0 3px !important;
+}
+.box_BaoZhong .suopai input{
+	width: 44% !important;
+	text-align: center;
 }
 #BaoZhong .span_type{
 	display: inline-block;

@@ -49,6 +49,13 @@
 }
 .box_infor .Project_infor .type_marginleft{
 	margin-left: -35px;
+	height: 28px;
+	line-height: 45px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+	display: inline-block;
 }
 .box_State{
 	margin: 15px 0 40px;
@@ -185,6 +192,14 @@ input:focus{
 	padding: 0 5px;
 	border: none;
 	font-size: 0.8em;
+}
+.box_BaoZhong .suopai select{
+	width: 20% !important;
+	padding: 0 3px !important;
+}
+.box_BaoZhong .suopai input{
+	width: 44% !important;
+	text-align: center;
 }
 #BaoZhong .span_type{
 	display: inline-block;
