@@ -45,6 +45,16 @@
 	width: 60%;
 	margin: 5px 0 0;
 }
+.operation_icon_2{
+	width: 100%;
+	background: #9EC6BC;
+	margin-bottom: 7px;
+}
+.operation_icon_2 span{
+	font-size: 46px;
+	color: #577B73;
+	line-height: 170%;
+}
 .operation_type{
 	color: #403225;
 	text-align: left;
@@ -68,7 +78,7 @@ body{
 	width: 82%;
 	height: 320px;
 	background: white;
-	margin: 0 9%;
+	/*margin: 0 9%;*/
 }
 .box_ShangZhong{
 	width: 100%;
@@ -82,6 +92,7 @@ body{
 	height: 32px;
 	width: 100%;
 	margin-bottom: 4%;
+	position: relative;
 }
 .infor_customer span{
 	font-size: 0.8em;
@@ -169,7 +180,7 @@ input:focus{
 	width: 82%;
 	height: 300px;
 	background: white;
-	margin: 0 9%;
+	/*margin: 0 9%;*/
 }
 .box_XiaZhong{
 	width: 100%;
@@ -189,9 +200,9 @@ input:focus{
 	top: 10% !important;
 	color: #665241;
 	width: 82%;
-	height: 280px;
+	height: 340px;
 	background: white;
-	margin: 0 9%;
+	/*margin: 0 9%;*/
 }
 .box_BaoZhong{
 	width: 100%;
@@ -212,7 +223,7 @@ input:focus{
 	background: #F0E4DD;
 	border: none;
 	font-size: 0.8em;
-	padding-left: 10px;
+	padding: 0 0 0 10px;
 }
 .box_BaoZhong .suopai select{
 	width: 20% !important;
@@ -233,7 +244,7 @@ input:focus{
 	font-size: 0.7em;
 }
 #BaoZhong .mui-select:before {
-  	right: 25px;
+  	right: 10%;
 }
 #BaoZhong .infor_customer select{
 	display: inline-block;
@@ -245,8 +256,50 @@ input:focus{
 	font-size: 0.8em;
 }
 #BaoZhong .box_button{
-	margin-top: 15%;
+	margin-top: 12%;
 }
+/*提示框*/
+/* bubble */
+.tip-bubble {
+	  display: none;
+	  position: relative;
+	  left: 30%;
+	  top: -77px;
+	  z-index: 12;
+	  border: 1px solid #0A7D61;
+	  background: white;
+	  padding: 8px 10px;
+	  color: red;
+	  font-size: 0.6em;
+	  text-align: center;
+	  border-radius: 5px;
+	  border: 1px solid #E6E6E6;
+	  box-shadow: 1px 1px 2px #E6E6E6;
+	  -moz-box-shadow: 1px 1px 2px #E6E6E6;
+	  -webkit-border-shadow: 1px 1px 2px #E6E6E6;
+}
+.tip-bubble:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid;
+}
+.tip-bubble-top:after {
+  border-color: #F0E4DD;
+  border-top-color: white;
+  left: 30%;
+  top: 100%;
+  margin-left: -15px;
+}
+/*.tips_suopai{
+	display: none;
+	font-size: 0.6em;
+	color: red;
+	position: absolute;
+	bottom: -15px;
+	left: 30%;
+}*/
 
 /*弹窗---icon操作*/
 #Icon_SheZhi{
@@ -280,3 +333,59 @@ input:focus{
 	width: 50px;
 	margin:  3px auto 0;
 }
+/*弹窗---帮助*/
+#Help{
+	position: fixed;
+	top: 0 !important;
+	left: 0;
+	color: #665241;
+	width: 100%;
+	height: 100%;
+}
+.box_Help .mui-icon-closeempty{
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 222;
+	color: white;
+	font-size: 40px !important;
+}
+#slider .mui-slider-indicator{
+	bottom: 30px;
+	z-index: 222 !important;
+}
+
+/*弹窗---上班/下班*/
+
+#ShangBan,#XiaBan{
+	position: fixed;
+	top: 20% !important;
+	color: #665241;
+	width: 82%;
+	height: 180px;
+	background: white;
+	border-radius: 5px;
+}
+.box_shangban .tips{
+	width: 90%;
+	margin: 20px auto 10px;
+	color: #665241;
+	font-size: 1.0em;
+	padding: 0 0 3px 10px;
+	border-bottom: 1px solid #C7C7C7;
+}
+.shangban_content{
+	padding: 25px 0 25px 10%;
+	
+}
+.shangban_content p{
+	color: #665241;
+	font-size: 0.9em;
+	line-height: 10px;
+}
+
+
+

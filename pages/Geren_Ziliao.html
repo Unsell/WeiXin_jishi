@@ -5,18 +5,31 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	    <script src="../js/jquery-2.1.0.js"></script>
-	    <script src="../js/mui.min.js"></script>
 	    <link href="../css/mui.min.css" rel="stylesheet"/>
 	    <link href="../css/mui.listpicker.css" rel="stylesheet" />
 	    <link href="../css/mui.poppicker.css" rel="stylesheet" />
 	    <link href="../css/common.css" rel="stylesheet"/>
 	    <link href="../css/Geren_Ziliao.css" rel="stylesheet"/>
 	    <link rel="stylesheet" type="text/css" href="../css/Xiugai_Ziliao.css"/>
-	    <style type="text/css">
-	    	
-
-	    </style>
+	    <style>
+			.mui-btn {
+				font-size: 16px;
+				padding: 8px;
+				margin: 3px;
+			}
+			h5.mui-content-padded {
+				margin-left: 3px;
+				margin-top: 20px !important;
+			}
+			h5.mui-content-padded:first-child {
+				margin-top: 12px !important;
+			}
+			.ui-alert {
+				text-align: center;
+				padding: 20px 10px;
+				font-size: 16px;
+			}
+		</style>
 		<title>个人资料</title>
 	</head>
 	<body>
@@ -365,40 +378,76 @@
 				<h1 class="mui-center mui-title">修改密码</h1>
 			</div>
 			<div class="mui-page-content">
-
-					<div class="infor">
-						<span class="size">旧密码</span>
-						<input class="input_size" type="password" data-min="6" id="old_pwd"/>
-					</div>
-					<div class="infor">
-						<span class="size">新密码</span>
-						<input class="input_size" type="password" data-min="6" id="pwd"/>
-					</div>
-					<div class="infor">
-						<span class="size">确定新密码</span>
-						<input class="input_size_2" type="password" data-min="6" id="apwd"/>
-					</div>
-
+				<div class="infor">
+					<span class="size">旧密码</span>
+					<input class="input_size" type="password" data-min="6" id="old_pwd"/>
+				</div>
+				<div class="infor">
+					<span class="size">新密码</span>
+					<input class="input_size" type="password" data-min="6" id="pwd"/>
+				</div>
+				<div class="infor">
+					<span class="size">确定新密码</span>
+					<input class="input_size_2" type="password" data-min="6" id="apwd"/>
+				</div>
 			</div>
 		</div>
-		
-</body>
+
+	    <script src="../js/jquery-2.1.0.js"></script>
+	    <script src="../js/mui.min.js"></script>
 		<script src="../js/mui.view.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/mui.listpicker.js"></script>
 		<script src="../js/mui.poppicker.js"></script>
 		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
 		<script>
-     
+     	(function($, doc) {
+				$.init();
+				$.ready(function() {
+					
+					//级联示例
+					var cityPicker = new $.PopPicker({
+						layer: 2
+					}); 
+					cityPicker.setData(cityData);
+					var JiGuan = doc.getElementById('JiGuan');
+					JiGuan.addEventListener('tap', function(event) {
+						cityPicker.show(function(items) {
+							JiGuan.value = items[0].text + items[1].text;
+							var na_pr = document.getElementById('na_pr'),
+							na_city = document.getElementById('na_city');
+							na_pr.value=items[0].value;
+							na_city.value=items[1].value;
+						});
+					}, false);
+					//-----------------------------------------
+//					//级联示例
+					var cityPicker3 = new $.PopPicker({
+						layer: 3
+					}); 
+					cityPicker3.setData(cityData3);
+					var showCityPickerButton = doc.getElementById('showCityPicker2');
+					showCityPickerButton.addEventListener('tap', function(event) {
+						cityPicker3.show(function(items) {
+							var ad_pr=document.getElementById('ad_pr'),
+								ad_city=document.getElementById('ad_city'),
+								ad_area=document.getElementById('ad_area');
+								ad_pr.value=items[0].value;
+								ad_city.value=items[1].value;
+								ad_area.value=items[2].value;
+								showCityPickerButton.innerText = items[0].text + items[1].text + items[2].text;
+						});
+					}, false);
+				});
+			})(mui, document);
+			
 //		主页结构信息，和切换
-		mui.init();
 		 //初始化单页view
 		var viewApi = mui('#app').view({
 			defaultPage: '#setting'
 		});
 		 //初始化单页的区域滚动
 		mui('.mui-scroll-wrapper').scroll();
-		
 		var view = viewApi.view;
 		(function($) {
 			//处理view的后退与webview后退
@@ -411,7 +460,15 @@
 				}
 			};
 			//监听页面切换事件方案1,通过view元素监听所有页面切换事件，目前提供pageBeforeShow|pageShow|pageBeforeBack|pageBack四种事件(before事件为动画开始前触发)
-		
+			//第一个参数为事件名称，第二个参数为事件回调，其中e.detail.page为当前页面的html对象
+			view.addEventListener('pageBeforeShow', function(e) {
+				
+				
+			});
+			view.addEventListener('pageShow', function(e) {
+
+				
+			});
 			view.addEventListener('pageBeforeBack', function(e) {
 
 			});
@@ -420,6 +477,9 @@
 			});
 		})(mui);
 		
+		
+		
+		
 		$(function(){
 			//图片显示
 			var img = document.querySelector('.ShangChuan');
@@ -427,9 +487,13 @@
 			fileSelect.addEventListener('change',displayFile,false);
 			function displayFile(event){
 				//console.log(event);
-				var file = event.target.files;
+//				var self = this;
+				var file = event.target.files || event.dataTransfer.files;
 				//console.log(file[0].size);
+//				self.lastUploadFile = this.uploadFile;
+//				this.uploadFile = this.uploadFile.concat(this.filterFile(files));
 				var url = window.URL.createObjectURL(file[0]);
+//				alert(url)
 				img.src = url;
 			}
 			//图片放大
@@ -457,7 +521,7 @@
 					//给图片添加点击事件，触发预览显示；
 					value.addEventListener('tap',function () {
 						slider.style.display = "block";
-						//alert(value.src);
+//						alert(value.src);
 						_slider.refresh();
 						_slider.gotoItem(index,0);
 					})
@@ -488,54 +552,7 @@
 			}
 		});
 
-
-				// 在这里调用plus api
-	             (function($, doc) {
-					$.ready(function() {
-						//级联示例
-						var cityPicker = new $.PopPicker({
-							layer: 2
-						}); 
-						cityPicker.setData(cityData);
-						var JiGuan = doc.getElementById('JiGuan');
-						JiGuan.addEventListener('tap', function(event) {
-							cityPicker.show(function(items) {
-								JiGuan.value = items[0].text + items[1].text;
-								var na_pr = document.querySelector('#na_pr'),
-								na_city = document.querySelector('#na_city');
-								na_pr.value=items[0].value;
-								na_city.value=items[1].value;
-							});
-						}, false);
-
-						
-						//3级联示例
-						var cityPicker3 = new $.PopPicker({
-							layer: 3
-						}); 
-						cityPicker3.setData(cityData3);
-						var showCityPickerButton = doc.getElementById('showCityPicker2');
-						showCityPickerButton.addEventListener('tap', function(event) {
-							cityPicker3.show(function(items) {
-								showCityPickerButton.innerText = items[0].text + items[1].text + items[2].text;
-								var ad_pr=document.querySelector('#ad_pr'),
-									ad_city=document.querySelector('#ad_city'),
-									ad_area=document.querySelector('#ad_area');
-									ad_pr.value=items[0].value;
-									ad_city.value=items[1].value;
-									ad_area.value=items[2].value;
-							});
-						}, false);
-						
-					});
-				})(mui, document);
-				
-			
-			
-			
-
-		
-</script>
-		
+	</script>
+</body>	
 	
 </html>

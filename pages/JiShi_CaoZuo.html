@@ -36,6 +36,12 @@
 					<div class="box_Line"></div>
 					<div class="operation_type">上钟</div>
 				</a>
+				<!--<a class="operation_infor" >
+					<div class="operation_icon_2">
+						<span class="mui-icon iconfont icon-iconfont74"></span>
+					</div>
+					<div class="operation_type">上钟</div>
+				</a>-->
 				<a href="#BaoZhong" class="operation_infor operation_right">
 					<div class="operation_icon">
 						<span class="mui-icon iconfont icon-biaoqian16"></span>
@@ -43,13 +49,14 @@
 					<div class="box_Line"></div>
 					<div class="operation_type">报钟</div>
 				</a>
-				<a class="operation_infor">
+				<a href="#XiaBan" class="operation_infor">
 					<div class="operation_icon">
 						<span class="mui-icon iconfont icon-augiczhiwentubiao"></span>
 					</div>
 					<div class="box_Line"></div>
-					<div class="operation_type">下班</div>
+					<div class="operation_type">上班</div>
 				</a>
+				
 			</div>
 		</div>
 		<!--底部-->
@@ -58,8 +65,11 @@
 				<a href="#Icon_SheZhi" class="span_icon right_border">
 					<span class="mui-icon iconfont icon-shezhi"></span>
 				</a>
-				<a class="span_icon">
+				<a class="span_icon right_border">
 					<span class="mui-icon iconfont icon-icon"></span>
+				</a>
+				<a href="#Help" class="span_icon">
+					<span class="mui-icon mui-icon-help"></span>
 				</a>
 			</div>
 		</div>
@@ -165,8 +175,17 @@
 					<input type="text"  value="" />
 				</div>
 				<div class="infor_customer">
-					<span>客户锁牌</span>
+					<span>客户姓名</span>
 					<input type="text"  value="" />
+				</div>
+				<div class="infor_customer">
+					<span>预约时间</span>
+					<input type="datetime-local"  value="" />
+				</div>
+				<div class="infor_customer">
+					<span>客户锁牌</span>
+					<input class="input_suopai" type="text"  value="" />
+					<sapn class="tip-bubble tip-bubble-top">只有客户在场内时，才需填写</sapn>
 				</div>
 				<!--<div class="infor_customer suopai">
 					<span>客户锁牌</span>
@@ -216,16 +235,95 @@
 				</div>
 			</div>
 		</div>
-		
+		<!--弹窗---帮助-->
+		<div id="Help" class="mui-popover mui-popover-action">
+			<div class="box_Help">
+				<span class="mui-icon mui-icon-closeempty"></span>
+				<div id="slider" class="mui-slider" >
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../images/2.png" >
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/1.png">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/2.png" >
+							</a>
+						</div>
+						
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../images/1.png" >
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--弹窗---上班-->
+		<div id="ShangBan" class="mui-popover mui-popover-action">
+			<div class="box_shangban">
+				<div class="tips">您确定要上班吗？</div>
+				<div class="shangban_content">
+					<p>“领客”开始为您接单。</p>
+					<p>用户界面您的状态将显示为“闲”</p>
+				</div>
+			</div>
+			<div class="box_button">
+				<button class="btn_confirm">取消</button>
+				<button class="btn_cancle">确定</button>
+			</div>
+		</div>
+		<!--弹窗---上班-->
+		<div id="XiaBan" class="mui-popover mui-popover-action">
+			<div class="box_shangban">
+				<div class="tips">您确定要下班吗？</div>
+				<div class="shangban_content">
+					<p>“领客”将停止为您接单。</p>
+					<p>用户界面您的状态将显示为“待”</p>
+				</div>
+			</div>
+			<div class="box_button">
+				<button class="btn_confirm">取消</button>
+				<button class="btn_cancle">确定</button>
+			</div>
+		</div>
 		<script type="text/javascript">
 			document.querySelector('.ShangZhong_confirm').addEventListener('tap', function() {
 			  //打开注册二维码页面
 			    window.location.href='JiShi_ShangZhong.html';
 			});
 			$(function(){
-				$('.operation_icon').css("height",$('.operation_icon').width())
+				$('.operation_icon').css("height",$('.operation_icon').width());
+				$('.operation_icon_2').css("height",$('.operation_icon_2').width());
+				$('.mui-slider-item>a>img').css("height",window.innerHeight);
+				$('.mui-slider-item>a>img').css("width",window.innerWidth);
 				$('.box_Icon_SheZhi>.span_icon').click(function(){
 					mui('#Icon_SheZhi').popover('hide');
+				})
+				$('.input_suopai').click(function(){
+					$('.tip-bubble').show();
+
+				})
+				$('.input_suopai').blur(function(){
+					$('.tip-bubble').hide(300);
+				})
+				$('.box_Help>.mui-icon-closeempty').click(function(){
+					mui('#Help').popover('toggle');
 				})
 			})
 		</script>

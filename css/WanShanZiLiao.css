@@ -104,6 +104,10 @@
 }
 .xiangmu a{
 	color: #7D7780 !important;
+	font-size: 0.9em;
+}
+.mui-table-view-cell>a:not(.mui-btn){
+	padding-left: 5%;
 }
 .xiangmu .mui-table-view-cell{
 	padding: 0 0 0 25px;

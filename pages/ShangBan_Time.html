@@ -43,8 +43,11 @@
 				<a href="#Icon_SheZhi" class="span_icon right_border">
 					<span class="mui-icon iconfont icon-shezhi"></span>
 				</a>
-				<a class="span_icon">
+				<a class="span_icon right_border">
 					<span class="mui-icon iconfont icon-icon"></span>
+				</a>
+				<a href="#Help" class="span_icon">
+					<span class="mui-icon mui-icon-help"></span>
 				</a>
 			</div>
 		</div>
@@ -68,6 +71,45 @@
 				</div>
 			</div>
 		</div>
+		<!--弹窗---帮助-->
+		<div id="Help" class="mui-popover mui-popover-action">
+			<div class="box_Help">
+				<span class="mui-icon mui-icon-closeempty"></span>
+				<div id="slider" class="mui-slider" >
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../images/2.png" >
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/1.png">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="../images/2.png" >
+							</a>
+						</div>
+						
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="../images/1.png" >
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
 			document.querySelector('.mui-btn-positive').addEventListener('tap', function() {
 			  //打开技师操作页面
@@ -75,8 +117,13 @@
 			});
 			
 			$(function(){
+				$('.mui-slider-item>a>img').css("height",window.innerHeight);
+				$('.mui-slider-item>a>img').css("width",window.innerWidth);
 				$('.box_Icon_SheZhi>.span_icon').click(function(){
 					mui('#Icon_SheZhi').popover('hide');
+				})
+				$('.box_Help>.mui-icon-closeempty').click(function(){
+					mui('#Help').popover('toggle');
 				})
 			})
 		</script>
