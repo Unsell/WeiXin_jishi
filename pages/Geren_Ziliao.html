@@ -69,21 +69,21 @@
 					   <!--用户姓名-->
 					   <a  href="#user_name"  class="infor Zhenshi_Xingming">
 							<div class="mui-navigate-right">
-								<span class="size loca_1">真实姓名</span>
-								<span class="size loca_2" id="name"></span>
+								<span class="size loca_1">真实姓名<span class="red">*</span></span>
+								<span class="size loca_2" id="name">sadasdasdasdasdasdasdasdasdasd</span>
 							</div>
 					   </a>
 						<!--用户工号-->
 						<a href="#user_num" class="infor GongHao">
 							<div class="mui-navigate-right">
-								<span class="size loca_1" >工号</span>
-								<span class="size loca_2" id="job_number"></span>
+								<span class="size loca_1" >工号<span class="red">*</span></span>
+								<span class="size loca_2" id="job_number">sada</span>
 							</div>
 						</a>
 						<!--性别选择-->
 						<a href="#user_sex" class="infor XingBie">
 							<div class="mui-navigate-right">
-								<span class="size loca_1">性别</span>
+								<span class="size loca_1">性别<span class="red">*</span></span>
 								<span class="size loca_2" id="sex"></span>
 							</div>
 						</a>
@@ -98,20 +98,20 @@
 						<a href="#user_shenfen" class="infor ShenFen">
 							<div class="mui-navigate-right">
 								<span class="size loca_1" >身份证号</span>
-								<span class="size loca_2" id="ident"></span>
+								<span class="size loca_2" id="ident">2132131231231231xxx</span>
 							</div>
 						</a>
 						<!--地址选择-->	
 						<div class=" box_2">
 							<div class="infor">
-								<span class="size loca">地址</span>
+								<span class="size loca">地址<span class="red">*</span></span>
 							</div>
 							<a href="#user_dizhi" class="">
 								<div class="mui-content-padded">
 									<button  class="mui-btn mui-btn-block" type='button' id="linkage_3">请选择地址</button>
 								</div>
 								<div class="infor XiangXi_addr mui-navigate-right">
-									<span class="size loca_1">详细地址</span>
+									<span class="size loca_1 Spill_over">详细地址</span>
 									<span class="size loca_2" id="address"></span>
 								</div>
 							</a>
@@ -126,12 +126,12 @@
 						<!--工种-->
 						<a href="#user_gongzhong" class="infor GongZhong">
 							<div class="mui-navigate-right">
-								<span class="size loca_1">工种</span>
+								<span class="size loca_1">工种<span class="red">*</span></span>
 								<span class="size loca_2" id="craft"></span>
 							</div>
 						</a>
 						<!--项目-->
-						<div class="mui-table-view-cell mui-collapse "><a class="mui-navigate-right size" href="#">项目</a>
+						<div class="mui-table-view-cell mui-collapse "><a class="mui-navigate-right size" href="#">项目<span class="red">*</span></a>
 							<a href="#user_xiangmu" class="mui-collapse-content XiangMu">
 								<form class="mui-input-row project_list">
 								</form>
@@ -140,7 +140,7 @@
 						<!--语言-->
 						<a href="#user_yuyan" class="infor YuYan">
 							<div class="mui-navigate-right">
-								<span class="size loca_1">语言</span>
+								<span class="size loca_1">语言<span class="red">*</span></span>
 								<span class="size loca_2" id="language"></span>
 							</div>
 						</a>
@@ -246,10 +246,17 @@
 			</div>
 			<div class="mui-page-content">
 				<div class="infor">
-					<div class="mui-input-row">
-						<input class="mui-input-clear" type="text" placeholder="请选择地址" id="JiGuan" readonly="readonly" />
-						<input type="hidden" name="" id="na_pr" value=""/>
-						<input type="hidden" name="" id="na_city"/>
+					<div class="select_box">
+						<select class="Seclect_type">
+							<option value="">请选择省</option>
+							<option value="">2asd啊实打实</option>
+						</select>
+					</div>
+					<div class="select_box">
+						<select class="Seclect_type">
+							<option value="">请选择区</option>
+							<option value="">2asd啊实打实</option>
+						</select>
 					</div>
 				</div>
 			</div>
@@ -286,10 +293,24 @@
 			<div class="mui-page-content">
 				<div class="box_2">
 					<div class="mui-content-padded">
-						<button id='showCityPicker2' class="mui-btn mui-btn-block" type='button'>选择地区</button>
-						<input type="hidden" name="" id="ad_pr"/>
-						<input type="hidden" name="" id="ad_city"/>
-						<input type="hidden" name="" id="ad_area"/>
+						<div class="select_box">
+							<select class="Seclect_type">
+								<option value="">请选择省</option>
+								<option value="">2</option>
+							</select>
+						</div>
+						<div class="select_box">
+							<select class="Seclect_type">
+								<option value="">请选择市</option>
+								<option value="">2</option>
+							</select>
+						</div>
+						<div class="select_box">
+							<select class="Seclect_type">
+								<option value="">请选择区</option>
+								<option value="">2asd啊实打实</option>
+							</select>
+						</div>
 					</div>
 					<div class="infor">
 						<form id="testForm" action=""> 
@@ -330,7 +351,11 @@
 			<div class="mui-page-content">
 				<div class="mui-select chang_gongzhong">
 					<span>工种</span>
+					<span class="Work_type">asdasdasdasd</span>
 					<select id="change_craft" >
+						<option value="sd">asasdasdasdasdasdda</option>
+						<option value="s">easdasdasdwq</option>
+						<option value="d">qasdasdasdasdasdasdasdasdasdswe</option>
 					</select>
 				</div>
 				<div class="xiangmu_tip">请选择项目：</div>
@@ -394,7 +419,7 @@
 		</div>
 
 	    <script src="../js/jquery-2.1.0.js"></script>
-	    <script src="../js/mui.min.js"></script>
+	    <script src="../js/mui.js"></script>
 		<script src="../js/mui.view.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/mui.listpicker.js"></script>
 		<script src="../js/mui.poppicker.js"></script>
@@ -469,9 +494,6 @@
 
 				
 			});
-			view.addEventListener('pageBeforeBack', function(e) {
-
-			});
 			view.addEventListener('pageBack', function(e) {
 
 			});
@@ -481,6 +503,9 @@
 		
 		
 		$(function(){
+			$('#change_craft').change(function(){
+				$('.Work_type').html($('#change_craft option:selected').text());
+			})
 			//图片显示
 			var img = document.querySelector('.ShangChuan');
 			var fileSelect = document.querySelector('.fileselect');

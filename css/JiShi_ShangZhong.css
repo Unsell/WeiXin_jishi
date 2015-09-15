@@ -87,7 +87,7 @@
 	width: 82%;
 	height: 320px;
 	background: white;
-	/*margin: 0 9%;*/
+	margin: 0 9%;
 }
 .box_XiaZhong{
 	width: 100%;
@@ -158,7 +158,7 @@ input:focus{
 	width: 82%;
 	height: 340px;
 	background: white;
-	/*margin: 0 9%;*/
+	margin: 0 9%;
 }
 .box_BaoZhong{
 	width: 100%;

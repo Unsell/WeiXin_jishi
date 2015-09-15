@@ -39,6 +39,7 @@
 				<!--<a class="operation_infor" >
 					<div class="operation_icon_2">
 						<span class="mui-icon iconfont icon-iconfont74"></span>
+						<canvas id="canvas" width="" height=""></canvas>
 					</div>
 					<div class="operation_type">上钟</div>
 				</a>-->
@@ -56,7 +57,6 @@
 					<div class="box_Line"></div>
 					<div class="operation_type">上班</div>
 				</a>
-				
 			</div>
 		</div>
 		<!--底部-->
@@ -84,7 +84,7 @@
 					<span>项目</span>
 					<select name="" id="">
 						<option value="">请选择项目</option>
-						<option value="">日式</option>
+						<option value="">日式sasdasdasdasdasdasd</option>
 						<option value="">中式</option>
 					</select>
 				</div>
@@ -280,7 +280,7 @@
 				<div class="tips">您确定要上班吗？</div>
 				<div class="shangban_content">
 					<p>“领客”开始为您接单。</p>
-					<p>用户界面您的状态将显示为“闲”</p>
+					<p>用户界面您的状态将显示为<span class="spare">闲</span></p>
 				</div>
 			</div>
 			<div class="box_button">
@@ -288,13 +288,13 @@
 				<button class="btn_cancle">确定</button>
 			</div>
 		</div>
-		<!--弹窗---上班-->
+		<!--弹窗---下班-->
 		<div id="XiaBan" class="mui-popover mui-popover-action">
 			<div class="box_shangban">
 				<div class="tips">您确定要下班吗？</div>
 				<div class="shangban_content">
 					<p>“领客”将停止为您接单。</p>
-					<p>用户界面您的状态将显示为“待”</p>
+					<p>用户界面您的状态将显示为<span class="waiting">待</span></p>
 				</div>
 			</div>
 			<div class="box_button">
@@ -302,12 +302,53 @@
 				<button class="btn_cancle">确定</button>
 			</div>
 		</div>
+		<!--弹窗---提示-->
+		<div id="tip">
+			<div class="tip_content">
+				<div class="box_tip">
+					<div class="title">0008号锁牌</div>
+					<div class="box_tip_content">
+						<p>0012号技师正在服务中</p>
+						<p>确认同时服务此顾客</p>
+					</div>
+				</div>
+				<div class="box_button">
+					<button class="btn_confirm">取消</button>
+					<button class="btn_cancle">确定</button>
+				</div>
+			</div>
+		</div>
 		<script type="text/javascript">
+			window.onload = function (){
+				var canvas = document.getElementById('canvas');
+				
+				canvas.height = document.querySelector('.operation_icon_2').offsetWidth;
+				canvas.width = document.querySelector('.operation_icon_2').offsetWidth;
+				var context = canvas.getContext("2d");
+				
+				context.lineWidth = 2;
+				context.strokeStyle = "#1a1a1a";
+				context.beginPath();
+				context.moveTo(8,8);
+				context.lineTo(canvas.width-8,canvas.height-8);
+				context.closePath();//如果绘制的图像不是封闭的，会自动补一条直线让其封闭
+				context.stroke();
+				
+				context.beginPath();
+				context.moveTo(8,canvas.width-8);
+				context.lineTo(canvas.height-8,8);
+				context.closePath();//如果绘制的图像不是封闭的，会自动补一条直线让其封闭
+				context.stroke();
+				
+			}
+			
 			document.querySelector('.ShangZhong_confirm').addEventListener('tap', function() {
 			  //打开注册二维码页面
 			    window.location.href='JiShi_ShangZhong.html';
 			});
 			$(function(){
+				
+				
 				$('.operation_icon').css("height",$('.operation_icon').width());
 				$('.operation_icon_2').css("height",$('.operation_icon_2').width());
 				$('.mui-slider-item>a>img').css("height",window.innerHeight);

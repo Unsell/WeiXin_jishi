@@ -45,6 +45,11 @@
 	width: 40%;
 	border-bottom: 1px solid #F7F0EB;
 	font-size: 1em;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
+
 }
 .banci_time{
 	margin-top: 3px;

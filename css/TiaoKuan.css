@@ -1,0 +1,39 @@
+
+
+
+
+body{
+	font-family: "Microsoft YaHei","iconfont"  !important;
+	background: #FAF1E9;
+}
+/*header*/
+.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow:none
+}
+.mui-title{
+	letter-spacing: 2px;
+	color: #6A6A74;
+	margin: 0px;
+}
+.mui-bar-nav .mui-icon{
+	color: #656570;
+}
+.mui-pull-right{
+	height: 40px;
+	width: 40px;
+	text-align: right;
+}
+.mui-content{
+	font-size: 13px;
+	color: #785F57;
+}
+.paragraph{
+	text-indent: 2em;
+	margin: 10px 5% 20px;
+}
+.subtitle{
+	margin: 10px 5% 10px;
+}
+
+

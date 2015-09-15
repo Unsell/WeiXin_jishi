@@ -6,7 +6,7 @@
  * Houfeng@DCloud.io
  */
 
-(function($) {
+(function($, document) {
 
 	var panelBuffer = '<div class="mui-poppicker">\
 		<div class="mui-poppicker-header">\
@@ -44,9 +44,11 @@
 				self.hide();
 			}, false);
 			self.ok.addEventListener('tap', function(event) {
-				self.hide();
 				if (self.callback) {
-					self.callback(self.getSelectedItems());
+					var rs = self.callback(self.getSelectedItems());
+					if (rs !== false) {
+						self.hide();
+					}
 				}
 			}, false);
 			self.mask[0].addEventListener('tap', function() {
@@ -67,7 +69,7 @@
 				self.pickers.push(picker);
 				picker.addEventListener('change', function(event) {
 					var nextPicker = this.nextSibling;
-					if (nextPicker && nextPicker.__listpicker_inited) {
+					if (nextPicker && nextPicker.listpickerId) {
 						var eventData = event.detail || {};
 						var preItem = eventData.item || {};
 						nextPicker.setItems(preItem.children);
@@ -87,7 +89,7 @@
 			var items = [];
 			for (var i in self.pickers) {
 				var picker = self.pickers[i];
-				items.push(picker.getSelectedItem());
+				items.push(picker.getSelectedItem() || {});
 			}
 			return items;
 		},
@@ -96,14 +98,29 @@
 			var self = this;
 			self.callback = callback;
 			self.mask.show();
+			document.body.classList.add($.className('poppicker-active-for-page'));
 			self.panel.classList.add($.className('active'));
 		},
 		//隐藏
 		hide: function() {
 			var self = this;
+			if (self.disposed) return;
 			self.panel.classList.remove($.className('active'));
 			self.mask.close();
+			document.body.classList.remove($.className('poppicker-active-for-page'));
+		},
+		dispose: function() {
+			var self = this;
+			self.hide();
+			setTimeout(function() {
+				self.panel.parentNode.removeChild(self.panel);
+				for (var name in self) {
+					self[name] = null;
+					delete self[name];
+				};
+				self.disposed = true;
+			}, 300);
 		}
 	});
 
-})(mui);
+})(mui, document);

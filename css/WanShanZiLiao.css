@@ -70,10 +70,26 @@
 	border-top: 1px solid #FAF1E9;
 	border-bottom: 1px solid #FAF1E9;
 }
-.box_dizhi .button .btn{
+/*.box_dizhi .button .btn{
 	width: 80%;
 	color: #938799;
 	margin: 5px 10% 0;
+}*/
+.box_dizhi .button .select_box{
+	width: 30%;
+	height: 35px;
+	display: inline-block;
+	margin: 4px 0 0 2%;
+	border-radius: 3px;
+	border: 1px solid #CCCCCC;
+}
+.box_dizhi .button .select_box .Seclect_type{
+	width: 100%;
+	height: 27px;
+	line-height: 29px;
+	padding: 0 0 0 8px;
+	color: #7D7780;
+	font-size: 0.8em;
 }
 .box_dizhi input{
 	text-align: center;
@@ -93,6 +109,11 @@
 .text_right{
 	width: 100%;
 	text-align: right;
+	padding-left: 15%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
 }
 .Box_JiShi_infor .Date{
 	text-align: right !important;

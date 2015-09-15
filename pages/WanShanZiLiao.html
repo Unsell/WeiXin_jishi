@@ -13,7 +13,6 @@
 		<link href="../css/mui.listpicker.css" rel="stylesheet" />
 		<link href="../css/mui.poppicker.css" rel="stylesheet" />
 		
-		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	</head>
 	<body>
 		<div class="mui-content">
@@ -43,7 +42,24 @@
 				<div class="box_dizhi">
 					<div class="title">地址<span class="red">*</span></div>
 					<div class="button">
-						<button id='showCityPicker3' class="btn">选择城市</button>
+						<div class="select_box">
+							<select class="Seclect_type">
+								<option value="">请选择省</option>
+								<option value="">2</option>
+							</select>
+						</div>
+						<div class="select_box">
+							<select class="Seclect_type">
+								<option value="">请选择市</option>
+								<option value="">2</option>
+							</select>
+						</div>
+						<div class="select_box">
+							<select class="Seclect_type">
+								<option value="">请选择区</option>
+								<option value="">2asd啊实打实</option>
+							</select>
+						</div>
 					</div>
 					<input type="text" value="" placeholder="请输入详细地址"/>
 				</div>
@@ -205,12 +221,14 @@
 				<button class="btn_cancle">取消</button>
 			</div>
 		</div>
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script src="../js/mui.listpicker.js"></script>
 		<script src="../js/mui.poppicker.js"></script>
 		<script src="../js/city.data.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/city.data-3.js" type="text/javascript" charset="utf-8"></script>
 		<script>
+			
 			(function($) {
 				$('#Type_GongZhong').scroll({
 					indicators: true //是否显示滚动条
@@ -237,15 +255,17 @@
 //					}, false);
 //					//-----------------------------------------
 //					//级联示例
+					
 					var cityPicker3 = new $.PopPicker({
 						layer: 3
-					}); 
+					});
 					cityPicker3.setData(cityData3);
 					var showCityPickerButton = doc.getElementById('showCityPicker3');
 					var cityResult3 = doc.getElementById('cityResult3');
 					showCityPickerButton.addEventListener('tap', function(event) {
 						cityPicker3.show(function(items) {
-							cityResult3.innerText ="你选择的城市是:" + items[0].text+" "  + items[1].text+" " + items[2].text;
+							cityResult3.innerText = "你选择的城市是:" + (items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text;
+							
 						});
 					}, false);
 				});

@@ -20,9 +20,17 @@
 	color: #665241;
 	
 }
-.box_infor ul>li>span{
-	padding-right: 10px;
+.box_infor ul>li{
+	width: 88%;
+	margin-bottom: 5px;
+	text-align: left;
+	font-size: 12px;
+	color: #665241;
 	border-bottom: 1px solid #E6D3C3;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	-o-text-overflow:ellipsis;
+	white-space:nowrap;
 }
 .box_operation{
 	margin: 15px 0;
@@ -47,13 +55,31 @@
 }
 .operation_icon_2{
 	width: 100%;
-	background: #9EC6BC;
+	background: #333333;
 	margin-bottom: 7px;
+	position: relative;
+	overflow: hidden;
 }
 .operation_icon_2 span{
 	font-size: 46px;
 	color: #577B73;
 	line-height: 170%;
+}
+.operation_icon_2 .icon-iconfont74{
+	color: #1a1a1a;
+}
+/*.operation_icon_2 .prohibit{
+	font-size: 180px;
+	color: #1a1a1a;
+	position: absolute;
+	left: -50px;
+	top: -115px;
+}*/
+/*canvas---style*/
+#canvas{
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .operation_type{
 	color: #403225;
@@ -78,7 +104,7 @@ body{
 	width: 82%;
 	height: 320px;
 	background: white;
-	/*margin: 0 9%;*/
+	margin: 0 9%;
 }
 .box_ShangZhong{
 	width: 100%;
@@ -180,7 +206,7 @@ input:focus{
 	width: 82%;
 	height: 300px;
 	background: white;
-	/*margin: 0 9%;*/
+	margin: 0 9%;
 }
 .box_XiaZhong{
 	width: 100%;
@@ -202,7 +228,7 @@ input:focus{
 	width: 82%;
 	height: 340px;
 	background: white;
-	/*margin: 0 9%;*/
+	margin: 0 9%;
 }
 .box_BaoZhong{
 	width: 100%;
@@ -368,6 +394,7 @@ input:focus{
 	height: 180px;
 	background: white;
 	border-radius: 5px;
+	margin: 0 9%;
 }
 .box_shangban .tips{
 	width: 90%;
@@ -386,6 +413,63 @@ input:focus{
 	font-size: 0.9em;
 	line-height: 10px;
 }
+.shangban_content p .spare{
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 38px;
+	border: 1px solid #429650;
+	color: #429650;
+	border-radius: 50%;
+	
+}
+.shangban_content p .waiting{
+	width: 38px;
+	height: 38px;
+	display: inline-block;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 38px;
+	border: 1px solid #B6B6B7;
+	color: #B6B6B7;
+	border-radius: 50%;
+}
+/*弹窗---提示*/
+#tip{
+	display: none;
+	 position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgba(0,0,0,.3);
+}
+.tip_content{
+	position: fixed;
+	top: 25% !important;
+	color: #665241;
+	width: 82%;
+	margin: 0 9%;
+	height: 180px;
+	background: white;
+	border-radius: 2px;
+}
+.box_tip .title{
+	width: 94%;
+	margin: 0 auto;
+	color: #665242;
+	padding: 15px 0 5px 10px;
+	border-bottom: 1px solid #E4E4E4;
+}
+.box_tip_content{
+	padding: 30px 9% 25px;
+}
 
-
-
+.box_tip_content p{
+	line-height: 10px;
+	color: #665242;
+	
+}
