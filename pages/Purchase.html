@@ -33,8 +33,8 @@
 					</ul>
 				</div>
 				<div class="PackageSums clearfix">
-					<span class="ActualSums">￥200.00</span>
-					<span class="TotalSums">￥400.00</span>
+					<span class="span-ActualSums">￥200.00</span>
+					<span class="span-TotalSums">￥400.00</span>
 					<button type="button" class="mui-btn mui-btn-success mui-btn-outlined btnShowPopupPurchase">立即购买</button>
 				</div>
 			</div>
@@ -61,11 +61,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="PurchaseSums">
-					<span class="TotalSumsTitle">合计：<span class="ActualSums">￥200.00</span></span>
-					<!--<span class="units">￥</span>-->
-					<span class="TotalSums">￥400.00</span>
-				</div>
+				
 				<div class="boxBtnConfirm">
 					<button class="mui-btn mui-btn-success">确认支付</button>
 				</div>
@@ -87,10 +83,11 @@
 				$('.mui-numbox').on('click', '.mui-btn', function(){
 					
 					var PurchaseNumbers	= $('.mui-numbox-input').val();
+//					alert(PurchaseNumbers);
 					
 					if( PurchaseNumbers < 1 ){
-						$('.ActualSums').html('￥' + $('.ActualUnivalent').html() );
-						$('.TotalSums').html('￥' + $('.TotalUnivalent').html() );
+						$('.PurchaseSums').find('.ActualSums').html('￥' + $('.ActualUnivalent').html() );
+						$('.PurchaseSums').find('.TotalSums').html('￥' + $('.TotalUnivalent').html() );
 					} else{
 						var ActualUnivalent2 = ActualUnivalent*PurchaseNumbers;
 						var TotalUnivalent2 = TotalUnivalent*PurchaseNumbers;
