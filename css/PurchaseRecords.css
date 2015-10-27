@@ -1,0 +1,103 @@
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+header.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #665241;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #665241;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+}
+
+/*box---购买记录*/
+.boxPurchaseRecords{
+	width: 100%;
+	height: auto;
+	background: white;
+	margin-bottom: 5px;
+	border-top: 1px solid #DED0C7;
+}
+.PurchaseInfor{
+	padding: 10px 5% 15px;
+	width: 100%;
+	position: relative;
+	border-bottom: 1px solid #DED0C7;
+}
+.ImagePackage{
+	width: 34%;
+	height: auto;
+}
+.PurchaseName{
+	color: #665241;
+	font-size: 1em;
+	position: absolute;
+	left: 38%;
+	top: 20px;
+}
+.PurchaseTimes{
+	color: #8B7765;
+	font-size: 0.6em;
+	position: absolute;
+	left: 38%;
+	top: 50px;
+	line-height: 15px;
+}
+.PurchaseUnivalent{
+	color: #4D4D4D;
+	font-size: 0.7em;
+	position: absolute;
+	right: 5%;
+	top: 20px;
+}
+.PurchaseNumber{
+	color: #999999;
+	font-size: 0.7em;
+	position: absolute;
+	right: 5%;
+	top: 40px;
+}
+.PurchaseNumber .product{
+	display: inline-block;
+	height: 21px;
+	vertical-align: bottom;
+}
+
+.PurchaseNumber .Number{
+	display: inline-block;
+	margin-left: 3px;
+}
+.PurchaseSums{
+	padding: 10px 5%;
+	text-align: right;
+	font-size: 0.8em;
+	color: #665241;
+	border-bottom: 1px solid #DED0C7;
+}
+.PurchaseSums .ActualSums{
+	color: #13A17D;
+}
+.PurchaseSums .TotalSums{
+	color: #A18269;
+	font-size: 0.8em;
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: line-through;
+}

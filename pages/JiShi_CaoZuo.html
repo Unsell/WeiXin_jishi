@@ -10,6 +10,7 @@
 		<link rel="stylesheet" href="../css/iconfont.css">
 		<link rel="stylesheet" href="../css/common.css">
 		<link rel="stylesheet" href="../css/JiShi_CaoZuo.css">
+			<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css">
 		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	</head>
@@ -22,11 +23,17 @@
 				<span class="mui-icon iconfont icon-dian loca_bottom"></span>
 			</div>
 			<div class="JiShi_infor">0021陈晓娟</div>
-			<div class="box_infor">
-				<ul>
-					<li><span>上班时间：09:00-20:00</span></li>
-					<li><span>当前状态：领客正在为您接单</span></li>
-				</ul>
+			<div class="box_center_infor">
+				<div class="box_infor">
+					<ul>
+						<li><span>上班时间：09:00-20:00</span></li>
+						<li><span>当前状态：领客正在为您接单</span></li>
+					</ul>
+				</div>
+				<div class="box_Collection_num">
+					<div class="Collection_num">530</div>
+					<div>收藏</div>
+				</div>
 			</div>
 			<div class="box_operation">
 				<a href="#ShangZhong" class="operation_infor operation_right" disabled="">
@@ -67,6 +74,9 @@
 				</a>
 				<a class="span_icon right_border">
 					<span class="mui-icon iconfont icon-icon"></span>
+				</a>
+				<a class="span_icon right_border">
+					<i class="fa fa-shopping-cart"></i>
 				</a>
 				<a href="#Help" class="span_icon">
 					<span class="mui-icon mui-icon-help"></span>
@@ -122,8 +132,8 @@
 				</div>
 			</div>
 			<div class="box_button">
-				<button class="btn_confirm ShangZhong_confirm">提交</button>
 				<button class="btn_cancle">取消</button>
+				<button class="btn_confirm ShangZhong_confirm">提交</button>
 			</div>
 		</div>
 		<!--弹窗---下钟 -->
@@ -159,8 +169,8 @@
 				</div>
 			</div>
 			<div class="box_button">
-				<button class="btn_confirm">提交</button>
 				<button class="btn_cancle">取消</button>
+				<button class="btn_confirm">提交</button>
 			</div>
 		</div>
 		<!--弹窗---报钟-->
@@ -211,8 +221,8 @@
 				</div>
 			</div>
 			<div class="box_button">
-				<button class="btn_confirm">确定</button>
 				<button class="btn_cancle">取消</button>
+				<button class="btn_confirm">确定</button>
 			</div>
 		</div>
 		<!--弹窗---icon操作-->
@@ -284,8 +294,8 @@
 				</div>
 			</div>
 			<div class="box_button">
-				<button class="btn_confirm">取消</button>
-				<button class="btn_cancle">确定</button>
+				<button class="btn_cancle">取消</button>
+				<button class="btn_confirm">确定</button>
 			</div>
 		</div>
 		<!--弹窗---下班-->
@@ -298,8 +308,8 @@
 				</div>
 			</div>
 			<div class="box_button">
-				<button class="btn_confirm">取消</button>
-				<button class="btn_cancle">确定</button>
+				<button class="btn_cancle">取消</button>
+				<button class="btn_confirm">确定</button>
 			</div>
 		</div>
 		<!--弹窗---提示-->
@@ -347,6 +357,10 @@
 			    window.location.href='JiShi_ShangZhong.html';
 			});
 			$(function(){
+				
+				$('.box_Collection_num').css('height',$(".box_infor").height()+26);
+				$('.box_Collection_num').css('width',$(".box_infor").height()+26);
+				$('.box_infor').css('width',$(".mui-content").width()-$('.box_Collection_num').width()-5);
 				
 				
 				$('.operation_icon').css("height",$('.operation_icon').width());

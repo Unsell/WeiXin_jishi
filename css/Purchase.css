@@ -1,0 +1,241 @@
+
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+header.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #665241;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #665241;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+}
+
+/*box---套餐*/
+.boxPackage{
+	width: 100%;
+	height: auto;
+	background: white;
+	margin-bottom: 5px;
+	border-top: 1px solid #DED0C7;
+}
+.PackageInfor{
+	position: relative;
+	width: 100%;
+	height: 100px;
+	background: url(../images/listBackground.png) no-repeat;
+	background-size: 100% 100%;
+	border-bottom: 1px solid #DED0C7;
+}
+.PackageInfor .ImagePackage{
+	width: 25%;
+	height: auto;
+	position: absolute;
+	left: 5%;
+	bottom: 20px;
+}
+.PackageName{
+	color: #773F0D;
+	font-weight: 700;
+	font-size: 0.9em;
+	position: absolute;
+	left: 33%;
+	top: 20px;
+	letter-spacing: 1px;
+}
+.PackageName .PackageTimes{
+	color: #FF6600;
+	font-weight: normal;
+	font-size: 0.9em;
+	letter-spacing: 0;
+}
+.PackageIntroduce{
+	position: absolute;
+	left: 33%;
+	top: 45px;
+	font-size: 0.5em;
+	color: #996F50;
+	margin: 0;
+	padding: 0 15px 0;
+}
+.PackageIntroduce>li{
+	float: left;
+	width: 50%;
+	line-height: 18px;
+}
+
+.PackageSums{
+	padding: 5px 5% 5px 8%;
+	font-size: 0.8em;
+	color: #665241;
+	border-bottom: 1px solid #DED0C7;
+}
+.PackageSums span{
+	line-height: 29px;
+}
+.PackageSums .ActualSums{
+	color: #13A17D;
+}
+.PackageSums .TotalSums{
+	color: #A18269;
+	font-size: 0.8em;
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: line-through;
+}
+
+.PackageSums .mui-btn-outlined{
+	padding: 5px 10px;
+	font-size: 0.8em;
+	color: #13A17D;
+	border-color: #32CF8B;
+	float: right;
+}
+/*弹窗---购买*/
+.PopupPurchase{
+	display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 998;
+    background-color: rgba(0,0,0,.3);
+}
+.boxPurchaseInfors{
+	width: 100%;
+	height: auto;
+	background: white;
+	position: fixed;
+    bottom: 0;
+    left: 0;
+}
+.boxPurchaseInfors .title{
+	width: 100%;
+	padding: 2px 2% 2px 7%;
+	color: #665241;
+	font-size: 0.9em;
+	line-height: 38px;
+	border-bottom: 1px solid #DED0C7;
+}
+.boxPurchaseInfors .title .mui-icon-closeempty{
+	font-size: 2.5em;
+	float: right;
+	color: #01CA98;
+}
+
+.PurchaseDetailed{
+	width: 100%;
+	height: auto;
+	padding: 10px 3%;
+	position: relative;
+	border-bottom: 1px solid #DED0C7;
+}
+.PurchaseDetailed .ImagePackage{
+	width: 34%;
+	height: auto;
+}
+.DetailedInfor{
+	color: #665241;
+	font-size: 1em;
+	position: absolute;
+	left: 38%;
+	top: 18px;
+}
+.DetailedInfor .PurchaseName,.DetailedInfor .PurchaseUnivalent{
+	color: #665241;
+	font-size: 1em;
+}
+.DetailedInfor .PurchaseUnivalent{
+	margin-top: 5px;
+	color: #4D4D4D;
+}
+.DetailedInfor .PurchaseUnivalent .TotalUnivalent,.DetailedInfor .PurchaseUnivalent .units{
+	font-size: 0.7em;
+	color: #A18269;
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: line-through;
+}
+.DetailedInfor .PurchaseUnivalent .units{
+	margin-right: -5px;
+}
+.mui-numbox {
+	float: right;
+	color: #7D6F67;
+	border: none;
+	background: none;
+	width: 130px;
+	height: 25px;
+	/*background: red;*/
+	padding: 0 25px;
+}
+.mui-numbox [class*=mui-numbox-btn] {
+	background: none;
+	border: 1px solid #01CA98;
+	color: #01CA98 !important;
+	width: 22px;
+	height: 22px;
+	margin: 0;
+	line-height: 50%;
+	font-size: 1.3em;
+	border-radius: 0 !important;
+}
+.mui-numbox .mui-numbox-input{
+	border: 1px solid #E6D8CF !important;
+	padding: 2px 10px;
+	width: 80px !important;
+	height: 22px;
+	/*margin-left: 5px;*/
+}
+
+
+.PurchaseSums{
+	padding: 10px 5%;
+	text-align: right;
+	font-size: 0.8em;
+	color: #665241;
+	border-bottom: 1px solid #DED0C7;
+}
+.PurchaseSums .ActualSums{
+	color: #13A17D;
+}
+.PurchaseSums .TotalSums, .PurchaseSums .units{
+	color: #A18269;
+	font-size: 0.8em;
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: line-through;
+}
+.PurchaseSums .units{
+	margin-right: -5px;
+}
+.boxBtnConfirm{
+	padding: 10px 0;
+}
+.boxBtnConfirm .mui-btn-success{
+	width: 60%;
+	margin: 0 20%;
+	font-size: 0.9em;
+	padding: 4px 10px;
+	background: #32CF8B;
+	border-color: #32CF8B;
+	border-radius: 2px;
+}

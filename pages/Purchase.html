@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>购买</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/Purchase.css">
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back  mui-pull-left">返回</a>
+			<h1 class="mui-title">购买</h1>
+		</header>
+		<div class="mui-content">
+			<div class="boxPackage">
+				<div class="PackageInfor">
+					<img src="../images/ImagePackage.png" alt="" class="ImagePackage" />
+					<div class="PackageName">
+						<span>基本套餐</span>
+						<span class="PackageTimes">买120天送100天</span>
+					</div>
+					<ul class="PackageIntroduce clearfix">
+						<li>空闲推荐</li>
+						<li>预约收藏</li>
+						<li>风采展示</li>
+						<li>带号推广</li>
+					</ul>
+				</div>
+				<div class="PackageSums clearfix">
+					<span class="ActualSums">￥200.00</span>
+					<span class="TotalSums">￥400.00</span>
+					<button type="button" class="mui-btn mui-btn-success mui-btn-outlined btnShowPopupPurchase">立即购买</button>
+				</div>
+			</div>
+		</div>
+		<!--弹窗---购买-->
+		<div class="PopupPurchase">
+			<div class="boxPurchaseInfors">
+				<div class="title clearfix">
+					<span>信息服务费</span>
+					<span class="mui-icon mui-icon-closeempty ClosePopupPurchase"></span>
+				</div>
+				<div class="PurchaseDetailed">
+					<img src="../images/EmptionRecord.png" alt="" class="ImagePackage" />
+					<div class="DetailedInfor clearfix">
+						<div class="PurchaseName">买<span class="PurchaseDays">120</span>天送<span class="GiveDays">100</span>天</div>
+						<div class="PurchaseUnivalent">
+							￥<span class="ActualUnivalent">200.00</span>
+							<span class="units">￥</span><span class="TotalUnivalent">400.00</span>
+						</div>
+						<div class="mui-numbox" data-numbox-min='1'>
+							<button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+							<input class="mui-numbox-input " type="number" />
+							<button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+						</div>
+					</div>
+				</div>
+				<div class="PurchaseSums">
+					<span class="TotalSumsTitle">合计：<span class="ActualSums">￥200.00</span></span>
+					<!--<span class="units">￥</span>-->
+					<span class="TotalSums">￥400.00</span>
+				</div>
+				<div class="boxBtnConfirm">
+					<button class="mui-btn mui-btn-success">确认支付</button>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				// 打开购买弹窗
+				$('.btnShowPopupPurchase').click(function(){
+					$('.PopupPurchase').toggle();
+				})
+				// 点X弹窗消失
+				$('.ClosePopupPurchase').click(function(){
+					$('.PopupPurchase').toggle();
+				})
+				// 监听选择数量
+				$('.mui-numbox').on('click', '.mui-btn', function(){
+					var ActualUnivalent = $('.ActualUnivalent').html();
+					var TotalUnivalent = $('.TotalUnivalent').html();
+					var PurchaseNumbers	= $('.mui-numbox-input').val();
+					
+					if( PurchaseNumbers < 1 ){
+						$('.ActualSums').html('￥' + $('.ActualUnivalent').html() );
+						$('.TotalSums').html('￥' + $('.TotalUnivalent').html() );
+					} else{
+						ActualUnivalent = ActualUnivalent*PurchaseNumbers;
+						TotalUnivalent = TotalUnivalent*PurchaseNumbers;
+						
+						$('.ActualSums').html('￥' + ActualUnivalent + '.00' );
+						$('.TotalSums').html('￥' + TotalUnivalent + '.00' );
+						
+					}
+					
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -136,9 +136,9 @@ input:focus{
 }
 .box_button .btn_confirm{
 	background: #E3D6CF;
+	margin-left: -5px;
 }
 .box_button .btn_cancle{
-	margin-left: -5px;
 	background: #ECE3DB;
 }
 

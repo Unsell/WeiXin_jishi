@@ -1,0 +1,102 @@
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+header.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #665241;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #665241;
+	font-size: 1.15em;
+	letter-spacing: 5px;
+}
+/*底部*/
+nav.mui-bar.mui-bar-tab{
+	height: 60px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+nav.mui-bar.mui-bar-tab .mui-btn-success{
+	background: #32CF8B;
+	border-color: #32CF8B;	
+	width: 70%;
+	height: auto;
+	margin: 8px 15% 0;
+	font-size: 0.75em;
+	padding: 5px 12px;
+	border-radius: 0;
+	letter-spacing: 1px;
+}
+.mui-content{
+	width: 100%;
+	height: 100%;
+	background: url(../images/Background.png) repeat-y;
+	background-size: 100% 100%;
+}
+#slider{
+	border-bottom: 1px solid #DED0C7;
+	border-top: 1px solid #DED0C7;
+}
+.mui-slider-indicator .mui-indicator{
+	background: transparent;
+	border: 1px solid #4E3C2F;
+	height: 8px;
+	width: 8px;
+	margin: 1px 0;
+	box-shadow: none;
+}
+.mui-slider-indicator .mui-active.mui-indicator {
+    background: #4E3C2F;
+}
+
+.boxSurplusTime{
+	width: 90%;
+	/*height: 130px;*/
+	padding-bottom: 20px;
+	background: white;
+	margin: 10px auto 0;
+	border: 1px solid #ECD6C7;
+}
+.boxSurplusTime .ImageTitle{
+	width: 140px;
+	height: 46px;
+	margin: 5px auto 10px;
+	color: white;
+	text-align: center;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+	padding: 13px 0 0 ;
+	background: url(../images/SurplusTime.png) no-repeat;
+	background-size: 100% 100%;
+}
+.boxSurplusTime .SurplusTime{
+	text-align: center;
+	padding-top: 10px;
+}
+.boxSurplusTime .SurplusTime .Time{
+	font-size: 3.5em;
+	color: #665241;
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+}
+.boxSurplusTime .SurplusTime .unit{
+	color: #666666;
+	display: inline-block;
+}

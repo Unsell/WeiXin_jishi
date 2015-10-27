@@ -1,4 +1,6 @@
-
+*{
+	box-sizing: border-box;
+}
 .red{
 	color: red;
 }
@@ -193,6 +195,17 @@
 }
 #XingBie .box_button{
 	margin-top: 40px;
+	
+}
+.box_button{
+	background: #E3D6CF;
+}
+.box_button:after,.box_button:before {
+	content: "";
+	display: table;
+}
+.box_button:after{
+	clear: both;
 }
 .box_button button{
 	width: 50%;
@@ -203,9 +216,10 @@
 }
 .box_button .btn_confirm{
 	background: #E3D6CF;
+	float: left;
 }
 .box_button .btn_cancle{
-	margin-left: -5px;
+	float: right;
 	background: #ECE3DB;
 }
 
@@ -288,7 +302,7 @@
 	background: #E3D6CF;
 }
 .box_button .btn_cancle{
-	margin-left: -5px;
+	/*margin-left: -5px;*/
 	background: #ECE3DB;
 }
 
