@@ -72,6 +72,8 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			var ActualUnivalent = $('.ActualUnivalent').text();
+			var TotalUnivalent = $('.TotalUnivalent').text();
 			$(function(){
 				// 打开购买弹窗
 				$('.btnShowPopupPurchase').click(function(){
@@ -83,19 +85,18 @@
 				})
 				// 监听选择数量
 				$('.mui-numbox').on('click', '.mui-btn', function(){
-					var ActualUnivalent = $('.ActualUnivalent').html();
-					var TotalUnivalent = $('.TotalUnivalent').html();
+					
 					var PurchaseNumbers	= $('.mui-numbox-input').val();
 					
 					if( PurchaseNumbers < 1 ){
 						$('.ActualSums').html('￥' + $('.ActualUnivalent').html() );
 						$('.TotalSums').html('￥' + $('.TotalUnivalent').html() );
 					} else{
-						ActualUnivalent = ActualUnivalent*PurchaseNumbers;
-						TotalUnivalent = TotalUnivalent*PurchaseNumbers;
+						var ActualUnivalent2 = ActualUnivalent*PurchaseNumbers;
+						var TotalUnivalent2 = TotalUnivalent*PurchaseNumbers;
 						
-						$('.ActualSums').html('￥' + ActualUnivalent + '.00' );
-						$('.TotalSums').html('￥' + TotalUnivalent + '.00' );
+						$('.ActualSums').html('￥' + ActualUnivalent2 + '.00' );
+						$('.TotalSums').html('￥' + TotalUnivalent2 + '.00' );
 						
 					}
 					
