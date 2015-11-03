@@ -61,7 +61,11 @@
 						</div>
 					</div>
 				</div>
-				
+				<!--<div class="PurchaseSums">
+					<span class="TotalSumsTitle">合计：<span class="ActualSums">￥200.00</span></span>
+					<!--<span class="units">￥</span>
+					<span class="TotalSums">￥400.00</span>
+				</div>-->
 				<div class="boxBtnConfirm">
 					<button class="mui-btn mui-btn-success">确认支付</button>
 				</div>
@@ -73,11 +77,11 @@
 			$(function(){
 				// 打开购买弹窗
 				$('.btnShowPopupPurchase').click(function(){
-					$('.PopupPurchase').toggle();
+					$('.PopupPurchase').slideToggle(100);
 				})
 				// 点X弹窗消失
 				$('.ClosePopupPurchase').click(function(){
-					$('.PopupPurchase').toggle();
+					$('.PopupPurchase').slideToggle(100);
 				})
 				// 监听选择数量
 				$('.mui-numbox').on('click', '.mui-btn', function(){

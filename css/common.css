@@ -4,7 +4,33 @@
 body,.mui-content{
 	background: #FAF1E9;
 }
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
 
+.clearfix:after {
+    clear: both;
+}
+header.mui-bar-nav{
+	background: #FAF1E9;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #665241;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #665241;
+	font-size: 1.15em;
+	letter-spacing: 1px;
+}
 /*logo*/
 .logo{
 	width: 100%;

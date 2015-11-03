@@ -1,0 +1,82 @@
+
+body, .mui-content{
+	background: #26263C;
+}
+.mui-content{
+	padding-bottom: 15px;
+}
+header.mui-bar-nav{
+	background: #26263C;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #F6F6FF;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #938799;
+	font-size: 1.05em;
+	letter-spacing: 1px;
+}
+.technician-infor{
+	background: #16162A;
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+}
+.technician-infor .technician-img{
+	width: 70px;
+	height: 70px;
+	padding: 1px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: #000004;
+}
+.technician-infor .technician-img img{
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	border: 1px solid #000004;
+}
+.technician-infor .technician-number{
+	color: #938799;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+.technician-infor-type{
+	background: #0D0D1B;
+	border-bottom: 1px solid #26263C;
+	width: 100%;
+	padding: 12px 6%;
+	color: #9797D9;
+	font-size: 0.75em;
+}
+.technician-infor-type .infor-types-genre{
+	float: left;
+}
+.technician-infor-type .infor-types-name{
+	float: right;
+}
+.culb-QR-code{
+	margin: 40px 0 10px;
+}
+.culb-QR-code img{
+	display: block;
+	width: 170px;
+	height: 170px;
+	margin: 0 auto;
+}
+.culb-name, .culb-address{
+	text-align: center;
+	color: #9797D9;
+	font-size: 0.8em;
+	margin-top: 5px;
+	letter-spacing: 1px;
+}
+
+
+

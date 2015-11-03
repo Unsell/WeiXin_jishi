@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>项目详细</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/common.css">
+		<link rel="stylesheet" href="../css/DataShow.css">
+		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="../js/jquery.circliful.min.js"></script>
+		<script type="text/javascript" src="../js/mui.min.js"></script>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back  mui-pull-left">返回</a>
+			<h1 class="mui-title">数据</h1>
+			<a class="mui-pull-right" href="ProjectDetail.html">项目详细</a>
+		</header>
+		<div class="mui-content">
+			<div class="project-infor clearfix">
+				<div class="project-left">
+					<div class="project-datatime">321</div>
+					<span>分钟</span>
+				</div>
+				<div class="project-right">
+					<div class="project-name">上钟时长</div>
+				</div>
+			</div>
+			<div class="technician-data clearfix">
+				<div class="technician-evaluate">
+					<div class="technician-evaluate-number">10</div>
+					<div class="data-title">评价分数</div>
+				</div>
+				<div class="dividing-line"></div>
+				<div class="technician-collection">
+					<div class="technician-collection-number">800</div>
+					<div class="data-title">收藏次数</div>
+				</div>
+				<div class="dividing-line"></div>
+				<div class="technician-browse">
+					<div class="technician-browse-number">300</div>
+					<div class="data-title">浏览次数</div>
+				</div>
+			</div>
+			<div class="technician-best clearfix">
+				<div class="technician-best-type">
+					<div class="technician-best-title">最多人做的项目</div>
+					<div class="technician-best-name">泰式按摩</div>
+				</div>
+				<div class="technician-best-type">
+					<div class="technician-best-title">最多人赞的技能</div>
+					<div class="technician-best-name">全程静音</div>
+				</div>
+			</div>
+			<div class="data-content clearfix">
+				<div class="data-week-duration clearfix">
+					<div id="annular-week-duration" data-dimension="53" data-text="" data-info="New Clients" data-width="5" data-fontsize="38" data-percent="35" data-fgcolor="#50B050"  data-bgcolor="#0A0A20"></div>
+					<div class="Introduction">
+						<div class="week-duration-number data-number">30%</div>
+						<span>周时长对比</span>
+					</div>
+					<div class="dividing-line-colspan"></div> <!--列-->
+				</div>
+				<div class="data-return-rate clearfix">
+					<div id="annular-return-rate" data-dimension="53" data-text="" data-info="New Clients" data-width="5" data-fontsize="38" data-percent="35" data-fgcolor="#50B050"  data-bgcolor="#0A0A20"></div>
+					<div class="Introduction">
+						<div class="return-rate-number data-number">30%</div>
+						<span>回访率</span>
+					</div>
+				</div>
+				<div class="data-profession-duration clearfix">
+					<div id="annular-profession-duration" data-dimension="53" data-text="" data-info="New Clients" data-width="5" data-fontsize="38" data-percent="35" data-fgcolor="#50B050"  data-bgcolor="#0A0A20"></div>
+					<div class="Introduction">
+						<div class="week-profession-duration data-number">30%</div>
+						<span>工种时长平均值</span>
+					</div>
+					<!--<div class="dividing-line-colspan"></div> <!--列-->
+				</div>
+				<div class="data-exceed-mean clearfix">
+					<div class="dividing-line-rowspan"></div> <!--行-->
+					<div id="annular-exceed-mean" data-dimension="53" data-text="" data-info="New Clients" data-width="5" data-fontsize="38" data-percent="35" data-fgcolor="#50B050"  data-bgcolor="#0A0A20"></div>
+					<div class="Introduction">
+						<div class="exceed-mean-number data-number">30%</div>
+						<span>超过平均值</span>
+					</div>
+				</div>
+			</div>
+			
+			
+
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				 $('#annular-week-duration').circliful();
+				 $('#annular-return-rate').circliful();
+				 $('#annular-profession-duration').circliful();
+				 $('#annular-exceed-mean').circliful();
+			})
+		</script>
+	</body>
+</html>

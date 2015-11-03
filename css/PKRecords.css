@@ -1,0 +1,124 @@
+
+body,.mui-content{
+	background: #26263C;
+}
+.mui-content{
+	padding-bottom: 15px;
+}
+header.mui-bar-nav{
+	background: #26263C;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #F6F6FF;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #938799;
+	font-size: 1.05em;
+	letter-spacing: 1px;
+}
+.technician-infor{
+	background: #16162A;
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+}
+.technician-infor .technician-img{
+	width: 70px;
+	height: 70px;
+	padding: 1px;
+	margin: 0 auto;
+	border-radius: 50%;
+	background: #000004;
+}
+.technician-infor .technician-img img{
+	width: 68px;
+	height: 68px;
+	border-radius: 50%;
+	border: 1px solid #000004;
+}
+.technician-infor .technician-number{
+	color: #938799;
+	font-size: 1em;
+	letter-spacing: 1px;
+}
+.data-content{
+	width: 100%;
+	height: auto;
+}
+.data-content .data-type{
+	width: 100%;
+	padding: 8px 6%;
+	background: #0D0D1B;
+	border-bottom: 1px solid #26263C;
+}
+.data-content .data-type .data-type-name{
+	color: #9797D9;
+	float: left;
+	font-size: 0.75em;
+	letter-spacing: 1px;
+}
+.data-content .data-type .data-type-number{
+	color: #DF945D;
+	float: right;
+}
+.data-type .data-type-number span{
+	font-size: 0.78em;
+	display: inline-block;
+	margin-left: 2px;
+}
+.technician-PK-title{
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+	background: #31314E;
+	color: #BCBCEB;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+.technician-PK-result{
+	width: 100%;
+}
+.PK-technician{
+	background: #16162A;
+	padding: 8px 5%;
+	border-bottom: 1px solid #26263C;
+}
+.PK-technician .img-box{
+	width: 42px;
+	height: 42px;
+	padding: 1px;
+	float: left;
+	border-radius: 50%;
+	background: #09091A;
+}
+.PK-technician .img-box img{
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+.PK-technician .PK-technician-infor{
+	font-size: 0.85em;
+	padding-top: 2px;
+	float: left;
+	margin-left: 8px;
+}
+.PK-technician .PK-technician-infor .PK-technician-number{
+	color: #9797D9;
+}
+.PK-technician .PK-technician-infor .PK-technician-duration{
+	color: #6666A6;
+	line-height: 15px;
+}
+
+.PK-technician .PK-technician-result{
+	float: right;
+	color: #BCBCEB;
+	line-height: 42px;
+}
+

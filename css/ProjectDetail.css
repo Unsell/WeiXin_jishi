@@ -1,0 +1,110 @@
+
+body, .mui-content{
+	background: #26263C;
+}
+.mui-content{
+	padding-bottom: 15px;
+}
+header.mui-bar-nav{
+	background: #26263C;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #F6F6FF;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #F6F6FF;
+	font-size: 1.05em;
+	letter-spacing: 1px;
+}
+.technician-project-infor{
+	width: 100%;
+	margin-top: 25px;
+}
+.technician-project-infor:first-child{
+	margin-top: 0;
+}
+.technician-project-infor .project-infor{
+	width: 100%;
+	height: 85px;
+	padding: 20px 4% 0 3%;
+	background: #16162A;
+}
+.project-infor .icon-dian{
+	float: left;
+	color: #DF945D;
+	font-size: 1.5em;
+	line-height: 40px;
+}
+.project-infor .project-left{
+	float: left;
+	color: #FFEF9C;
+	margin-left: 2px;
+	letter-spacing: 1px;
+}
+.project-infor .project-left .project-datatime{
+	font-size: 2em;
+	line-height: 1;
+}
+.project-infor .project-left span{
+	font-size: 0.68em;
+	display: block;
+	margin-top: -3px;
+}
+.project-infor .project-right{
+	float: right;
+	color: white;
+	text-align: right;
+	letter-spacing: 1px;
+}
+.project-infor .project-right .project-name{
+	font-size: 1.05em;
+	line-height: 1;
+}
+.project-infor .project-right span{
+	font-size: 0.8em;
+}
+.technician-data-contrast{
+	width: 100%;
+	background: #0D0D1B;
+}
+.technician-ranking, .technician-duration, .technician-average{
+	width: 33.3%;
+	float: left;
+	height: 80px;
+	padding-top: 18px;
+	text-align: center;
+}
+
+.dividing-line{
+	float: left;
+	margin-left: -1px;
+	margin-top: 13px;
+	width: 1px;
+	height: 55px;
+	background: #242445;
+}
+.technician-ranking{
+	background: #31314E;
+}
+.technician-ranking-number, .technician-duration-number, .technician-average-number{
+	color: #BCBCEB;
+	font-size: 1.6em;
+	line-height: 1;
+	letter-spacing: 1px;
+}
+.technician-data-contrast .contrast-title{
+	color: #9797D9;
+	font-size: 0.6em;
+	letter-spacing: 1px;
+}
+
+
+
+
+

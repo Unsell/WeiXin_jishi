@@ -1,0 +1,178 @@
+
+body, .mui-content{
+	background: #26263C;
+}
+.mui-content{
+	padding-bottom: 15px;
+}
+header.mui-bar-nav{
+	background: #26263C;
+	box-shadow: none;
+	border-bottom: none;
+}
+header a{
+	text-decoration: underline;
+	color: #F6F6FF;
+	line-height: 44px;
+	font-size: 0.8em;
+	letter-spacing: 1px;
+}
+.mui-bar-nav .mui-title{
+	color: #F6F6FF;
+	font-size: 1.05em;
+	letter-spacing: 1px;
+}
+.project-infor{
+	width: 100%;
+	height: 85px;
+	padding: 20px 6% 0 8%;
+	background: #16162A;
+}
+.project-infor .project-left{
+	float: left;
+	color: #FFEF9C;
+	margin-left: 2px;
+	letter-spacing: 1px;
+}
+.project-infor .project-left .project-datatime{
+	font-size: 2em;
+	line-height: 1;
+}
+.project-infor .project-left span{
+	font-size: 0.68em;
+	display: block;
+	margin-top: -3px;
+}
+.project-infor .project-right{
+	float: right;
+	color: white;
+	text-align: right;
+	letter-spacing: 1px;
+}
+.project-infor .project-right .project-name{
+	font-size: 1.05em;
+	line-height: 1;
+}
+
+.technician-data{
+	width: 100%;
+	background: #31314E;
+}
+.technician-evaluate, .technician-collection, .technician-browse{
+	width: 33.3%;
+	float: left;
+	height: 80px;
+	padding-top: 18px;
+	text-align: center;
+}
+
+.dividing-line{
+	float: left;
+	margin-left: -1px;
+	margin-top: 13px;
+	width: 1px;
+	height: 55px;
+	background: #454580;
+}
+
+.technician-evaluate-number, .technician-collection-number, .technician-browse-number{
+	color: #BCBCEB;
+	font-size: 1.6em;
+	line-height: 1;
+	letter-spacing: 1px;
+}
+.technician-data .data-title{
+	color: #9797D9;
+	font-size: 0.6em;
+	letter-spacing: 1px;
+}
+.technician-best{
+	width: 100%;
+	padding: 20px 0;
+	background: #16162A;
+}
+.technician-best .technician-best-type{
+	float: left;
+	width: 50%;
+	padding-left: 5%;
+}
+.technician-best .technician-best-type .technician-best-title{
+	color: #9797D9;
+	font-size: 0.75em;
+}
+.technician-best .technician-best-type .technician-best-name{
+	color: #DEC3FF;
+	font-size: 0.75em;
+}
+.data-content{
+	width: 100%;
+	background: #16162A;
+}
+.data-week-duration, .data-return-rate, .data-profession-duration, .data-exceed-mean{
+	float: left;
+	width: 50%;
+	padding: 15px 0 10px 4%;
+	position: relative;
+}
+.data-profession-duration{
+	background: #242440;
+}
+#annular-week-duration, #annular-return-rate, #annular-profession-duration, #annular-exceed-mean{
+	float: left;
+}
+.Introduction{
+	float: left;
+	color: #BCBCEB;
+	margin-left: 5px;
+}
+.Introduction .data-number{
+	font-size: 1.7em;
+	line-height: 1;
+	margin-top: 3px;
+}
+.Introduction span{
+	font-size: 0.62em;
+	display: block;
+	margin-top: -2px;
+}
+.dividing-line-colspan{
+	width: 1px;
+	height: 70px;
+	background: #242445;
+	position: absolute;
+}
+.data-week-duration .dividing-line-colspan{
+	right: 0;
+	bottom: 0;
+}
+.dividing-line-rowspan {
+	width: 100px;
+	height: 1px;
+	background: #242445;
+	position: absolute;
+}
+.data-exceed-mean .dividing-line-rowspan{
+	left: -4%;
+	top: 0;
+}
+.circliful { 
+    position: relative;  
+} 
+.circle-text, .circle-info, .circle-text-half, .circle-info-half { 
+    width: 100%; 
+    position: absolute; 
+    text-align: center; 
+    display: inline-block; 
+} 
+.circle-info, .circle-info-half { 
+    color: #999; 
+} 
+.circliful .fa { 
+    margin: -10px 3px 0 3px; 
+    position: relative; 
+    bottom: 4px; 
+} 
+
+
+
+
