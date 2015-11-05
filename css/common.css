@@ -208,16 +208,15 @@ input:focus{
 	height: 20px;
 	display: inline-block;
 	text-align: center;
-	margin: 0 !important;
 	color: #735C4E;
+	margin-left: -5px;
 }
-.box_icon .span_icon span,.box_icon .span_icon i{
+.box_icon .span_icon span{
 	font-size: 21px;
 	line-height: 20px;
 }
 .right_border{
 	border-right: 1px solid #735C4E;
-	margin-right: 10px;
 }
 
 

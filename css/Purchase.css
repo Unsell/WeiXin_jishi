@@ -177,18 +177,17 @@ header a{
 .DetailedInfor .PurchaseUnivalent .units{
 	margin-right: -5px;
 }
-.mui-numbox {
+/*.mui-numbox {
 	float: right;
 	color: #7D6F67;
 	border: none;
 	background: none;
 	width: 122px;
 	height: 25px;
-	/*background: red;*/
 	padding: 0 25px;
 	margin-top: 5px;
-}
-.mui-numbox [class*=mui-numbox-btn] {
+}*/
+/*.mui-numbox [class*=mui-numbox-btn] {
 	background: none;
 	border: 1px solid #01CA98;
 	color: #01CA98 !important;
@@ -199,14 +198,13 @@ header a{
 	line-height: 50%;
 	font-size: 1.1em;
 	border-radius: 0 !important;
-}
-.mui-numbox .mui-numbox-input{
+}*/
+/*.mui-numbox .mui-numbox-input{
 	border: 1px solid #E6D8CF !important;
 	padding: 2px 10px;
 	width: 70px !important;
 	height: 22px;
-	/*margin-left: 5px;*/
-}
+}*/
 
 
 .PurchaseSums{

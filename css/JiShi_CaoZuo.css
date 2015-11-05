@@ -34,12 +34,13 @@
 	background: white;
 	color: #665241;
 }
-.box_Collection_num div{
+.box_Collection_num .icon-title{
 	font-size: 11px;
-	line-height: 25px;
+	margin-top: -5px;
 }
-.box_Collection_num .Collection_num{
-	font-size: 20px;
+.box_Collection_num .Collection_num .icon-biaosheng{
+	font-size: 30px;
+	line-height: 1;
 }
 .box_operation{
 	margin: 15px 0;
