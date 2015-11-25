@@ -109,6 +109,7 @@ header a{
 	float: right;
 }
 /*弹窗---购买*/
+
 .PopupPurchase{
 	display: none;
     position: fixed;
@@ -239,3 +240,78 @@ header a{
 	border-color: #32CF8B;
 	border-radius: 2px;
 }
+/*确定订单页面*/
+/*底部*/
+nav.mui-bar.mui-bar-tab{
+	height: 60px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background-color: #FAF1E9;
+}
+nav.mui-bar.mui-bar-tab .mui-btn-success{
+	background: #32CF8B;
+	border-color: #32CF8B;	
+	width: 70%;
+	height: auto;
+	margin: 3px 15% 0;
+	font-size: 0.8em;
+	padding: 7px 12px;
+	border-radius: 0;
+	letter-spacing: 2px;
+}
+.boxOrderInfors{
+	width: 100%;
+	height: auto;
+	background: white;
+}
+.boxOrderInfors .title{
+	width: 94%;
+	padding: 12px 0 2px;
+	margin: 0 auto;
+	color: #665241;
+	font-size: 1em;
+	border-bottom: 1px solid #EBE2DD;
+}
+
+
+.OrderDetailed{
+	width: 100%;
+	height: auto;
+	padding: 10px 3%;
+	position: relative;
+	border-bottom: 1px solid #EBE2DD;
+}
+.OrderDetailed .ImagePackage{
+	width: 34%;
+	height: auto;
+}
+.DetailedInfor{
+	color: #665241;
+	font-size: 1em;
+	position: absolute;
+	left: 38%;
+	top: 18px;
+}
+.OrderDetailed .PurchaseName,.DetailedInfor .PurchaseUnivalent{
+	color: #665241;
+	font-size: 1em;
+}
+.OrderDetailed .PurchaseUnivalent{
+	margin-top: 5px;
+	color: #4D4D4D;
+}
+.OrderDetailed .PurchaseUnivalent .TotalUnivalent,.OrderDetailed .PurchaseUnivalent .units{
+	font-size: 0.7em;
+	color: #A18269;
+	display: inline-block;
+	margin-left: 5px;
+	text-decoration: line-through;
+}
+.OrderDetailed .PurchaseUnivalent .units{
+	margin-right: -5px;
+}
+
+
+
+
+

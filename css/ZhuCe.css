@@ -58,16 +58,18 @@ input:focus{
 
 .box_checkbox{
 	margin-top: 8px;
+	position: relative;
 }
 .box_checkbox .mui-left{
 	float: none !important;
 	/*margin-left: %;*/
+	display: inline-block;
 }
 .mui-checkbox.mui-left label{
 	padding-left: 0px;
 	width: 180px;
 	text-align: center;
-	color: #998573;
+	color: #AAAAAA;
 }
 .mui-checkbox input[type=checkbox]:before{
 	font-size: 24px;
@@ -77,6 +79,13 @@ input:focus{
 .box_checkbox .mui-checkbox.mui-left label{
 	font-size: 0.85em;
 }
-
+.review {
+	font-size: 0.85em;
+	color: #998573;
+	text-decoration: underline;
+	position: absolute;
+	left: 140px;
+	top: 7px;
+}
 
 

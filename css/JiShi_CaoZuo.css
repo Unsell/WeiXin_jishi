@@ -1,4 +1,13 @@
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
 
+.clearfix:after {
+    clear: both;
+}
 .mui-content{
 	width: 90%;
 	margin: 0 auto;
@@ -44,6 +53,8 @@
 }
 .box_operation{
 	margin: 15px 0;
+	height: auto;
+	
 }
 .operation_infor{
 	width: 30%;

@@ -26,10 +26,15 @@ header a{
 	font-size: 0.8em;
 	letter-spacing: 1px;
 }
+header a:hover{
+	color: #665241 !important;
+}
 .mui-bar-nav .mui-title{
 	color: #665241;
 	font-size: 1.15em;
 	letter-spacing: 1px;
+	right: 80px;
+	left: 80px;
 }
 /*logo*/
 .logo{

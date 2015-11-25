@@ -35,9 +35,10 @@
 			</div>
 			<div class="box_checkbox">
 				<div class="mui-input-row mui-checkbox mui-left">
-					<a href="TiaoKuan.html"><label>领客服务条款</label></a>
+					<label>领客服务条款</label>
 					<input name="checkbox" type="checkbox">
 				</div>
+				<a class="review" href="TiaoKuan.html">查看条款</a>
 			</div>
 			
 			<div class="box_btn">
@@ -68,7 +69,7 @@
 	    			 	
                     $("#btn").html( count + " 秒");
                     if (count == 0) {
-                    		$("#btn").html('获取验证码');
+                    	$("#btn").html('获取验证码');
                         clearInterval(countdown);
                     }
                     count--;

@@ -8,15 +8,15 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="../css/mui.min.css">
 		<link rel="stylesheet" href="../css/iconfont.css">
-		<link rel="stylesheet" href="../css/iconfont2.css">
+		<link rel="stylesheet" href	="../css/iconfont2.css">
 		<link rel="stylesheet" href="../css/common.css">
 		<link rel="stylesheet" href="../css/JiShi_CaoZuo.css">
-			<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css">
+		<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.css">
 		<script type="text/javascript" src="../js/mui.min.js"></script>
 		<script type="text/javascript" src="../js/jquery-2.1.0.js"></script>
 	</head>
-	<body>
-		<div class="mui-content">
+	<body class="clearfix">
+		<div class="mui-content clearfix">
 			<span class="HuoSuo_title">美丽水疗会所</span>
 			<div class="box_img">
 				<img src="../images/0.jpg" alt="" width="65px" height="65px" />
@@ -24,7 +24,7 @@
 				<span class="mui-icon iconfont icon-dian loca_bottom"></span>
 			</div>
 			<div class="JiShi_infor">0021陈晓娟</div>
-			<div class="box_center_infor">
+			<div class="box_center_infor clearfix">
 				<div class="box_infor">
 					<ul>
 						<li><span>上班时间：09:00-20:00</span></li>
@@ -36,7 +36,7 @@
 					<div class="icon-title">数据</div>
 				</a>
 			</div>
-			<div class="box_operation">
+			<div class="box_operation clearfix">
 				<a href="#ShangZhong" class="operation_infor operation_right" disabled="">
 					<div class="operation_icon">
 						<span class="mui-icon iconfont icon-iconfont74"></span>
@@ -68,7 +68,7 @@
 			</div>
 		</div>
 		<!--底部-->
-		<div class="box_nav">
+		<div class="box_nav clearfix">
 			<div class="box_icon ">
 				<a href="#Icon_SheZhi" class="span_icon right_border">
 					<span class="mui-icon iconfont icon-shezhi"></span>
@@ -367,6 +367,7 @@
 				
 				$('.operation_icon').css("height",$('.operation_icon').width());
 				$('.operation_icon_2').css("height",$('.operation_icon_2').width());
+				$('.box_operation').css("height",$('.operation_icon').height()+25);
 				$('.mui-slider-item>a>img').css("height",window.innerHeight);
 				$('.mui-slider-item>a>img').css("width",window.innerWidth);
 				$('.box_Icon_SheZhi>.span_icon').click(function(){

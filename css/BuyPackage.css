@@ -20,11 +20,13 @@ header a{
 	font-size: 0.8em;
 	letter-spacing: 1px;
 }
+
 .mui-bar-nav .mui-title{
 	color: #665241;
 	font-size: 1.15em;
 	letter-spacing: 5px;
 }
+
 /*底部*/
 nav.mui-bar.mui-bar-tab{
 	height: 60px;
@@ -92,7 +94,7 @@ nav.mui-bar.mui-bar-tab .mui-btn-success{
 	font-size: 3.5em;
 	color: #665241;
 	display: inline-block;
-	width: 70px;
+	width: 100px;
 	height: 30px;
 	text-align: center;
 }
